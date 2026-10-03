@@ -1,0 +1,13 @@
+Ripes version: v2.2.6-106-g5b8a616
+Processor: RV32_ISS
+Runs per case: 5
+
+Small guest region: 65536 bytes
+Large guest region: 4194304 bytes
+Guest-byte difference: 4128768 bytes
+
+Small median peak: 30289920 bytes
+Large median peak: 361304064 bytes
+Host-memory difference: 331014144 bytes
+
+Host bytes per guest byte: 80.17
