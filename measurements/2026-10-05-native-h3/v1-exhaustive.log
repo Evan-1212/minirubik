@@ -1,0 +1,70 @@
+make: Entering directory '/home/evan/projects/minirubik/optimized'
+mkdir -p build
+cc  -O3 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-function generate_tables.c -o build/generate-tables
+In file included from host_reference.h:7,
+                 from generate_tables.c:3:
+../solver.c: In function ‘unrank_state’:
+../solver.c:133:36: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  133 |         for (uint8_t j = q; j + 1U < CUBIES - i; ++j)
+      |                                    ^
+./build/generate-tables > v1_tables.c.tmp
+abstract states=5040 visited=5040 maximum=7 solved=0
+abstract states=729 visited=729 maximum=6 solved=0
+mv v1_tables.c.tmp v1_tables.c
+cc  -O3 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-function -DV1_STATS v1.c v1_tables.c verify.c -o build/verify-v1
+In file included from host_reference.h:7,
+                 from verify.c:3:
+../solver.c: In function ‘unrank_state’:
+../solver.c:133:36: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  133 |         for (uint8_t j = q; j + 1U < CUBIES - i; ++j)
+      |                                    ^
+./build/verify-v1 --all
+checked=100000/3674160 elapsed=10.8s
+checked=200000/3674160 elapsed=19.0s
+checked=300000/3674160 elapsed=27.5s
+checked=400000/3674160 elapsed=35.6s
+checked=500000/3674160 elapsed=44.0s
+checked=600000/3674160 elapsed=52.0s
+checked=700000/3674160 elapsed=60.3s
+checked=800000/3674160 elapsed=68.4s
+checked=900000/3674160 elapsed=76.7s
+checked=1000000/3674160 elapsed=85.0s
+checked=1100000/3674160 elapsed=93.5s
+checked=1200000/3674160 elapsed=102.0s
+checked=1300000/3674160 elapsed=110.5s
+checked=1400000/3674160 elapsed=118.6s
+checked=1500000/3674160 elapsed=126.8s
+checked=1600000/3674160 elapsed=135.0s
+checked=1700000/3674160 elapsed=143.2s
+checked=1800000/3674160 elapsed=151.3s
+checked=1900000/3674160 elapsed=159.5s
+checked=2000000/3674160 elapsed=167.6s
+checked=2100000/3674160 elapsed=175.8s
+checked=2200000/3674160 elapsed=184.0s
+checked=2300000/3674160 elapsed=192.1s
+checked=2400000/3674160 elapsed=200.2s
+checked=2500000/3674160 elapsed=208.5s
+checked=2600000/3674160 elapsed=216.6s
+checked=2700000/3674160 elapsed=224.6s
+checked=2800000/3674160 elapsed=232.8s
+checked=2900000/3674160 elapsed=241.0s
+checked=3000000/3674160 elapsed=249.2s
+checked=3100000/3674160 elapsed=257.3s
+checked=3200000/3674160 elapsed=265.3s
+checked=3300000/3674160 elapsed=273.3s
+checked=3400000/3674160 elapsed=281.4s
+checked=3500000/3674160 elapsed=289.6s
+checked=3600000/3674160 elapsed=297.7s
+{
+  "mode": "all", "status": "PASS",
+  "start_rank": 0, "states_checked": 3674160,
+  "optimal_lengths_and_physical_replay": true,
+  "total_generated": 59422039981, "max_generated": 639792,
+  "max_expanded": 106635, "worst_generated_state": "54721631111111",
+  "sample_generated": 233961, "sample_expanded": 38998,
+  "oracle_seconds": 0.141332, "search_validation_seconds": 303.861224,
+  "Ripes_retired_instructions": null
+}
+make: Leaving directory '/home/evan/projects/minirubik/optimized'
+
+V1_H3_EXIT_STATUS=0
