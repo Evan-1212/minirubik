@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "source_commit": "93770c0a399eac0c3bbf547d9980fd69a515debc",
+  "native_median_seconds": {
+    "v1": 2.325656326,
+    "v2": 0.394990916
+  },
+  "native_median_speedup_v1_over_v2": 5.887872940348835,
+  "distance11": {
+    "v1": {
+      "states": 2644,
+      "total_generated": 546298522,
+      "max_generated": 639792,
+      "max_expanded": 106635,
+      "worst_generated_state": "54721631111111",
+      "sample_generated": 233961,
+      "sample_expanded": 38998
+    },
+    "v2": {
+      "states": 2644,
+      "total_generated": 49153465,
+      "max_generated": 109629,
+      "max_expanded": 18273,
+      "worst_generated_state": "41532672313211",
+      "sample_generated": 35847,
+      "sample_expanded": 5979
+    }
+  },
+  "v2_generated_no_more_than_v1_for_every_d11_state": true,
+  "v2_native_static_bytes": 122795,
+  "Ripes_retired_instructions": null
+}

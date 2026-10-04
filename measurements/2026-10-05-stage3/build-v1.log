@@ -1,0 +1,21 @@
+make: Entering directory '/home/evan/projects/minirubik/optimized'
+mkdir -p build
+cc  -O3 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-function generate_tables.c -o build/generate-tables
+In file included from host_reference.h:7,
+                 from generate_tables.c:3:
+../solver.c: In function ‘unrank_state’:
+../solver.c:133:36: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  133 |         for (uint8_t j = q; j + 1U < CUBIES - i; ++j)
+      |                                    ^
+./build/generate-tables > v1_tables.c.tmp
+abstract states=5040 visited=5040 maximum=7 solved=0
+abstract states=729 visited=729 maximum=6 solved=0
+mv v1_tables.c.tmp v1_tables.c
+cc  -O3 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-function -DV1_STATS v1.c v1_tables.c verify.c -o build/verify-v1
+In file included from host_reference.h:7,
+                 from verify.c:3:
+../solver.c: In function ‘unrank_state’:
+../solver.c:133:36: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  133 |         for (uint8_t j = q; j + 1U < CUBIES - i; ++j)
+      |                                    ^
+make: Leaving directory '/home/evan/projects/minirubik/optimized'
