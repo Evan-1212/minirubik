@@ -1,0 +1,33 @@
+make: Entering directory '/workspace/scratch/6266f42a824a/minirubik/optimized_v2'
+./build/solver-v2 --self-test
+3 cases passed: solved, one-move scramble, distance-11
+python3 test_cli.py
+PASS: 9 optimal/replayed CLI vectors, 25 rejection cases per build; stats builds agree; closed stdout detected
+python3 audit_native.py
+{
+  "native_static_sections": {
+    ".rodata": 122539,
+    ".data.rel.ro": 24,
+    ".data": 8,
+    ".bss": 224
+  },
+  "native_static_bytes_including_data_rel_ro": 122795,
+  "native_text_bytes": 2571,
+  "unused_v1_search_orientation_pdb_and_stats_removed": true,
+  "host_generators_not_linked": true,
+  "target_RV32I_certified": false
+}
+./build/verify-v2 --check
+{
+  "mode": "check", "status": "PASS",
+  "oracle_states": 3674160, "oracle_diameter": 11,
+  "H1_states": 3674160, "parser_states": 3674160,
+  "H2": "PASS", "H4": "PASS",
+  "permutation_pdb_max": 7, "mixed_pdb_max": 9,
+  "abstract_states": 153090, "mixed_pdb_zero_count": 1,
+  "H4_odd_entries": 76440, "H4_even_entries": 76650, "padding_rows": 210,
+  "heuristic_dominates_v1": true, "strictly_improved_states": 3189950,
+  "table_bytes": 122184, "workspace_bytes": 144,
+  "oracle_seconds": 0.154115, "check_seconds": 0.233102
+}
+make: Leaving directory '/workspace/scratch/6266f42a824a/minirubik/optimized_v2'

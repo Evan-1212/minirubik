@@ -1,0 +1,34 @@
+cc  -O3 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-function -ffunction-sections -fdata-sections generate_tables.c pattern_build.c ../optimized/v1_tables.c -Wl,--gc-sections -o build/generate-tables
+In file included from ../optimized/host_reference.h:7,
+                 from pattern_build.c:5:
+../optimized/../solver.c: In function ‘unrank_state’:
+../optimized/../solver.c:133:36: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  133 |         for (uint8_t j = q; j + 1U < CUBIES - i; ++j)
+      |                                    ^
+./build/generate-tables $(cat pattern.txt) > v2_tables.c.tmp
+pattern=127 states=153090 maximum=9 goal_q=4 packed_bytes=76650
+mv v2_tables.c.tmp v2_tables.c
+cc  -O3 -std=c99 -Wall -Wextra -Wpedantic -ffunction-sections -fdata-sections v2.c v2_tables.c ../optimized/v1.c ../optimized/v1_tables.c cli.c -Wl,--gc-sections -o build/solver-v2
+cc  -O3 -std=c99 -Wall -Wextra -Wpedantic -ffunction-sections -fdata-sections -DV2_STATS v2.c v2_tables.c ../optimized/v1.c ../optimized/v1_tables.c cli.c -Wl,--gc-sections -o build/solver-v2-stats
+cc  -O3 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-function -ffunction-sections -fdata-sections -DV2_STATS v2.c v2_tables.c ../optimized/v1.c ../optimized/v1_tables.c verify.c pattern_build.c -Wl,--gc-sections -o build/verify-v2
+In file included from ../optimized/host_reference.h:7,
+                 from host_oracle.h:4,
+                 from verify.c:1:
+../optimized/../solver.c: In function ‘unrank_state’:
+../optimized/../solver.c:133:36: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  133 |         for (uint8_t j = q; j + 1U < CUBIES - i; ++j)
+      |                                    ^
+In file included from ../optimized/host_reference.h:7,
+                 from pattern_build.c:5:
+../optimized/../solver.c: In function ‘unrank_state’:
+../optimized/../solver.c:133:36: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  133 |         for (uint8_t j = q; j + 1U < CUBIES - i; ++j)
+      |                                    ^
+cc  -O3 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-function -ffunction-sections -fdata-sections v2.c v2_tables.c ../optimized/v1.c ../optimized/v1_tables.c benchmark.c -Wl,--gc-sections -o build/benchmark
+In file included from ../optimized/host_reference.h:7,
+                 from host_oracle.h:4,
+                 from benchmark.c:1:
+../optimized/../solver.c: In function ‘unrank_state’:
+../optimized/../solver.c:133:36: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  133 |         for (uint8_t j = q; j + 1U < CUBIES - i; ++j)
+      |                                    ^

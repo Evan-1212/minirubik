@@ -1,0 +1,16 @@
+make: Entering directory '/home/evan/projects/minirubik/optimized'
+./build/solver-v1 --self-test
+3 cases passed: solved, one-move scramble, distance-11
+python3 test_cli.py
+PASS: 9 optimal/replayed CLI vectors, 25 rejection cases per build; stats builds agree; closed stdout detected
+./build/verify-v1 --check
+{
+  "mode": "check", "status": "PASS",
+  "oracle_states": 3674160, "oracle_diameter": 11,
+  "H1_states": 3674160, "parser_states": 3674160,
+  "H2": "PASS", "H4": "N/A: byte tables, no packing",
+  "permutation_pdb_max": 7, "orientation_pdb_max": 6,
+  "table_bytes": 40383, "workspace_bytes": 144,
+  "oracle_seconds": 0.124950, "check_seconds": 0.243633
+}
+make: Leaving directory '/home/evan/projects/minirubik/optimized'

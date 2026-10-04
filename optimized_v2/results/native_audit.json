@@ -1,0 +1,13 @@
+{
+  "native_static_sections": {
+    ".rodata": 122539,
+    ".data.rel.ro": 24,
+    ".data": 8,
+    ".bss": 224
+  },
+  "native_static_bytes_including_data_rel_ro": 122795,
+  "native_text_bytes": 2571,
+  "unused_v1_search_orientation_pdb_and_stats_removed": true,
+  "host_generators_not_linked": true,
+  "target_RV32I_certified": false
+}

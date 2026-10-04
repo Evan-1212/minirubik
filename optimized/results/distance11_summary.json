@@ -1,0 +1,10 @@
+{
+  "mode": "hardest", "status": "PASS",
+  "start_rank": 0, "states_checked": 2644,
+  "optimal_lengths_and_physical_replay": true,
+  "total_generated": 546298522, "max_generated": 639792,
+  "max_expanded": 106635, "worst_generated_state": "54721631111111",
+  "sample_generated": 233961, "sample_expanded": 38998,
+  "oracle_seconds": 0.108866, "search_validation_seconds": 3.495871,
+  "Ripes_retired_instructions": null
+}

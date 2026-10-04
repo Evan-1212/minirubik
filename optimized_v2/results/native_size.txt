@@ -1,0 +1,31 @@
+build/solver-v2  :
+section                size     addr
+.interp                  28      792
+.note.gnu.property       48      824
+.note.gnu.build-id       36      872
+.note.ABI-tag            32      908
+.gnu.hash                48      944
+.dynsym                 384      992
+.dynstr                 240     1376
+.gnu.version             32     1616
+.gnu.version_r           80     1648
+.rela.dyn               312     1728
+.rela.plt               192     2040
+.init                    27     4096
+.plt                    144     4128
+.plt.got                 16     4272
+.plt.sec                128     4288
+.text                  2571     4416
+.fini                    13     6988
+.rodata              122539     8192
+.eh_frame_hdr            76   130732
+.eh_frame               448   130808
+.init_array               8   138592
+.fini_array               8   138600
+.data.rel.ro             24   138608
+.dynamic                496   138632
+.got                    128   139128
+.data                     8   139264
+.bss                    224   139296
+.comment                 43        0
+Total                128333

@@ -1,0 +1,16 @@
+{
+  "baseline_commit": "308da1e567eb0406e66b30a2c2927de525f9ca23",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "compiler": "cc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "flags": "-O3 -std=c99 -Wall -Wextra -Wpedantic; verifier defines V1_STATS",
+  "sanitizers": "address,undefined; ASAN_OPTIONS=detect_leaks=0 (sandbox /proc access prevents LeakSanitizer)",
+  "execution_location": "ChatGPT Linux execution environment; NOT the user's WSL/Ripes machine",
+  "retired_instruction_measurement": null,
+  "files_sha256": {
+    "cli.c": "63b79178bfea708f56d6ad698b710d0de07a3333c3bd530c43e7cc0be68bf103",
+    "generate_tables.c": "b3559ca12ab8d58c37196a37e81ed56f78244ea94cfdb674d91089b546abf245",
+    "v1.c": "f40f61dfd761c3786b229ddda13d04c6480e9a91c2d7318a41092f99a18341da",
+    "v1_tables.c": "2d1139f951656389eb4edaa150857b0417fa3bfef90ab966a76ea7f098f38c2f",
+    "verify.c": "56ab220c9abc8647e40e1fa710eb658825d287c6513e029fc424160a3885fd21"
+  }
+}

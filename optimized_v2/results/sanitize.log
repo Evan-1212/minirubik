@@ -1,0 +1,27 @@
+cc  -O1 -g -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-function -ffunction-sections -fdata-sections -DV2_STATS -fsanitize=address,undefined -fno-omit-frame-pointer v2.c v2_tables.c ../optimized/v1.c ../optimized/v1_tables.c verify.c pattern_build.c -Wl,--gc-sections -o build/verify-sanitize
+In file included from ../optimized/host_reference.h:7,
+                 from host_oracle.h:4,
+                 from verify.c:1:
+../optimized/../solver.c: In function ‘unrank_state’:
+../optimized/../solver.c:133:36: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  133 |         for (uint8_t j = q; j + 1U < CUBIES - i; ++j)
+      |                                    ^
+In file included from ../optimized/host_reference.h:7,
+                 from pattern_build.c:5:
+../optimized/../solver.c: In function ‘unrank_state’:
+../optimized/../solver.c:133:36: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  133 |         for (uint8_t j = q; j + 1U < CUBIES - i; ++j)
+      |                                    ^
+ASAN_OPTIONS=detect_leaks=0 ./build/verify-sanitize --check
+{
+  "mode": "check", "status": "PASS",
+  "oracle_states": 3674160, "oracle_diameter": 11,
+  "H1_states": 3674160, "parser_states": 3674160,
+  "H2": "PASS", "H4": "PASS",
+  "permutation_pdb_max": 7, "mixed_pdb_max": 9,
+  "abstract_states": 153090, "mixed_pdb_zero_count": 1,
+  "H4_odd_entries": 76440, "H4_even_entries": 76650, "padding_rows": 210,
+  "heuristic_dominates_v1": true, "strictly_improved_states": 3189950,
+  "table_bytes": 122184, "workspace_bytes": 144,
+  "oracle_seconds": 0.502507, "check_seconds": 1.394456
+}

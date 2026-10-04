@@ -1,0 +1,14 @@
+cc  -O3 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-function -ffunction-sections -fdata-sections -DV2_STATS -DV2_RUNTIME_TABLES_ONLY select_pattern.c pattern_build.c v2.c ../optimized/v1.c ../optimized/v1_tables.c -Wl,--gc-sections -o build/select-pattern
+In file included from ../optimized/host_reference.h:7,
+                 from host_oracle.h:4,
+                 from select_pattern.c:1:
+../optimized/../solver.c: In function ‘unrank_state’:
+../optimized/../solver.c:133:36: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  133 |         for (uint8_t j = q; j + 1U < CUBIES - i; ++j)
+      |                                    ^
+In file included from ../optimized/host_reference.h:7,
+                 from pattern_build.c:5:
+../optimized/../solver.c: In function ‘unrank_state’:
+../optimized/../solver.c:133:36: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+  133 |         for (uint8_t j = q; j + 1U < CUBIES - i; ++j)
+      |                                    ^

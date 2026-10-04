@@ -1,0 +1,42 @@
+{
+  "selected_cubies": [
+    1,
+    2,
+    7
+  ],
+  "selection_key": [
+    "max_generated",
+    "total_generated",
+    "lexicographic_cubies"
+  ],
+  "candidate_count": 35,
+  "native_median_seconds": {
+    "v1": 3.995968808,
+    "v2": 0.702679054
+  },
+  "native_median_speedup": 5.686762377863622,
+  "native_timing_repeats": 5,
+  "native_timing_stats_enabled": false,
+  "native_timing_environment": "ChatGPT Linux x86-64; not WSL/Ripes",
+  "Ripes_retired_instructions": null,
+  "distance11": {
+    "v1": {
+      "count": 2644,
+      "total_generated": 546298522,
+      "min_generated": 140895,
+      "median_generated": 191727.5,
+      "max_generated": 639792,
+      "max_min_ratio": 4.540913446183328
+    },
+    "v2": {
+      "count": 2644,
+      "total_generated": 49153465,
+      "min_generated": 7278,
+      "median_generated": 16514.5,
+      "max_generated": 109629,
+      "max_min_ratio": 15.063066776586975
+    }
+  },
+  "v2_generated_no_more_than_v1_for_each_d11_state": true,
+  "max_generated_reduction_percent": 82.8648998424488
+}
