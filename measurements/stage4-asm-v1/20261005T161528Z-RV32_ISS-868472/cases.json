@@ -1,0 +1,113 @@
+[
+  {
+    "case": "solved",
+    "input": "12345671111111",
+    "expected_length": 0,
+    "elf_sha256": "ebe96470c0ca53ff580ca94a3e9065c78f2aea68169efb4f75504206242d217b",
+    "elf": "solved.elf",
+    "isa": "RV32I",
+    "text_bytes": 1472,
+    "static_data_bytes": 126488,
+    "static_sections": [
+      {
+        "name": ".rodata",
+        "address": 5568,
+        "bytes": 122232,
+        "flags": 2
+      },
+      {
+        "name": ".bss",
+        "address": 127808,
+        "bytes": 4256,
+        "flags": 3
+      }
+    ],
+    "reserved_stack_bytes": 4096,
+    "static_limit_bytes": 131072,
+    "static_budget_pass": true,
+    "undefined_symbols": [],
+    "instruction_audit_pass": true,
+    "handwritten_runtime_symbols": [
+      "_start",
+      "asm_parse",
+      "asm_replay",
+      "asm_solve",
+      "target_main"
+    ],
+    "maximum_stack_bytes_by_call_graph": 80
+  },
+  {
+    "case": "short",
+    "input": "25314672313211",
+    "expected_length": 1,
+    "elf_sha256": "277ab03eae8163362e4b2fa72ba2b37195a30bca1ea50fb5a59368c36a042dce",
+    "elf": "short.elf",
+    "isa": "RV32I",
+    "text_bytes": 1472,
+    "static_data_bytes": 126488,
+    "static_sections": [
+      {
+        "name": ".rodata",
+        "address": 5568,
+        "bytes": 122232,
+        "flags": 2
+      },
+      {
+        "name": ".bss",
+        "address": 127808,
+        "bytes": 4256,
+        "flags": 3
+      }
+    ],
+    "reserved_stack_bytes": 4096,
+    "static_limit_bytes": 131072,
+    "static_budget_pass": true,
+    "undefined_symbols": [],
+    "instruction_audit_pass": true,
+    "handwritten_runtime_symbols": [
+      "_start",
+      "asm_parse",
+      "asm_replay",
+      "asm_solve",
+      "target_main"
+    ],
+    "maximum_stack_bytes_by_call_graph": 80
+  },
+  {
+    "case": "distance11",
+    "input": "21345671111111",
+    "expected_length": 11,
+    "elf_sha256": "e72a876cf8f3343803b329377398de7ad924652ae82bbae83e3c87725a94c50c",
+    "elf": "distance11.elf",
+    "isa": "RV32I",
+    "text_bytes": 1472,
+    "static_data_bytes": 126488,
+    "static_sections": [
+      {
+        "name": ".rodata",
+        "address": 5568,
+        "bytes": 122232,
+        "flags": 2
+      },
+      {
+        "name": ".bss",
+        "address": 127808,
+        "bytes": 4256,
+        "flags": 3
+      }
+    ],
+    "reserved_stack_bytes": 4096,
+    "static_limit_bytes": 131072,
+    "static_budget_pass": true,
+    "undefined_symbols": [],
+    "instruction_audit_pass": true,
+    "handwritten_runtime_symbols": [
+      "_start",
+      "asm_parse",
+      "asm_replay",
+      "asm_solve",
+      "target_main"
+    ],
+    "maximum_stack_bytes_by_call_graph": 80
+  }
+]

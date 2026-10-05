@@ -1,0 +1,6 @@
+PASS: complete executables and independent physical replay
+PASS: parser covers all permutations and all orientation coordinates (5769 cases)
+PASS: malformed input, early-NUL page boundary, and null-pointer rejection
+PASS: root heuristic on all 210 rows, odd/even and row ends (840 cases)
+PASS: 83 searches against exact BFS and physical replay; ABI/error paths
+SUPPLEMENTARY_VALIDATION=PASS; output: /workspace/scratch/6266f42a824a/stage4-asm-work/source/rv32/build/asm-v1/supplementary/validation.json

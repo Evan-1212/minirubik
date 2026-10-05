@@ -1,0 +1,151 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v1_tables.c.o
+ .data          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v1_tables.c.o
+ .bss           0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v1_tables.c.o
+ .rodata.v1_ori_dist
+                0x00000000      0x2d9 /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v1_tables.c.o
+ .text          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v2_v2_tables.c.o
+ .data          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v2_v2_tables.c.o
+ .bss           0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v2_v2_tables.c.o
+ .rodata.v2_default_pattern
+                0x00000000        0xc /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v2_v2_tables.c.o
+ .srodata.v2_selected_cubies
+                0x00000000        0x3 /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v2_v2_tables.c.o
+ .text          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_start.S.o
+ .data          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_start.S.o
+ .bss           0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_start.S.o
+ .text          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_parse.S.o
+ .data          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_parse.S.o
+ .bss           0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_parse.S.o
+ .text          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_solve.S.o
+ .data          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_solve.S.o
+ .bss           0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_solve.S.o
+ .text          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_replay.S.o
+ .data          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_replay.S.o
+ .bss           0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_replay.S.o
+ .text          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_target.S.o
+ .data          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_target.S.o
+ .bss           0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_target.S.o
+ .text          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/distance11-input.o
+ .data          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/distance11-input.o
+ .bss           0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/distance11-input.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00001000                        . = 0x1000
+
+.text           0x00001000      0x5c0
+ *(.text.start)
+ .text.start    0x00001000       0x54 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_start.S.o
+                0x00001000                _start
+ *(.text .text.*)
+ .text.asm_parse
+                0x00001054      0x160 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_parse.S.o
+                0x00001054                asm_parse
+ .text.asm_solve
+                0x000011b4      0x28c /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_solve.S.o
+                0x000011b4                asm_solve
+ .text.asm_replay
+                0x00001440       0xc8 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_replay.S.o
+                0x00001440                asm_replay
+ .text.target_main
+                0x00001508       0xb8 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_target.S.o
+                0x00001508                target_main
+                0x000015c0                        . = ALIGN (0x10)
+
+.rodata         0x000015c0    0x1dd78
+ *(.rodata .rodata.* .srodata .srodata.*)
+ .rodata.v1_perm_dist
+                0x000015c0     0x13b0 /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v1_tables.c.o
+                0x000015c0                v1_perm_dist
+ .rodata.v1_ori_next
+                0x00002970     0x1116 /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v1_tables.c.o
+                0x00002970                v1_ori_next
+ *fill*         0x00003a86        0x2 
+ .rodata.v1_perm_next
+                0x00003a88     0x7620 /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v1_tables.c.o
+                0x00003a88                v1_perm_next
+ .rodata.v2_packed
+                0x0000b0a8    0x12b6a /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v2_v2_tables.c.o
+                0x0000b0a8                v2_packed
+ *fill*         0x0001dc12        0x2 
+ .rodata.v2_row_offset
+                0x0001dc14      0x348 /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v2_v2_tables.c.o
+                0x0001dc14                v2_row_offset
+ .rodata.v2_projection
+                0x0001df5c     0x13b0 /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v2_v2_tables.c.o
+                0x0001df5c                v2_projection
+ .rodata.asm_face_rows
+                0x0001f30c       0x18 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_target.S.o
+                0x0001f30c                asm_face_rows
+ .rodata.input  0x0001f324       0x14 /home/evan/projects/minirubik/rv32/build/asm-v1/distance11-input.o
+                0x0001f324                cube_input
+                0x0001f334                expected_length
+
+.rela.dyn       0x0001f338        0x0
+ .rela.text.start
+                0x0001f338        0x0 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_start.S.o
+                0x0001f340                        . = ALIGN (0x10)
+
+.data           0x0001f340        0x0
+ *(.data .data.* .sdata .sdata.*)
+                0x0001fb40                        __global_pointer$ = (ADDR (.data) + 0x800)
+                0x0001f340                        . = ALIGN (0x10)
+
+.bss            0x0001f340     0x10a0
+                0x0001f340                        __bss_start = .
+ *(.bss .bss.* .sbss .sbss.*)
+ .bss.asm_frames
+                0x0001f340       0x90 /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_solve.S.o
+ .bss.result    0x0001f3d0        0xf /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_target.S.o
+                0x0001f3d0                result_length
+                0x0001f3d4                result_path
+ *(COMMON)
+                0x0001f3e0                        . = ALIGN (0x10)
+ *fill*         0x0001f3df        0x1 
+                0x0001f3e0                        __bss_zero_end = .
+                0x0001f3e0                        __stack_bottom = .
+                0x000203e0                        . = (. + 0x1000)
+ *fill*         0x0001f3e0     0x1000 
+                0x000203e0                        __stack_top = .
+                0x00000001                        ASSERT ((((SIZEOF (.rodata) + SIZEOF (.data)) + SIZEOF (.bss)) <= 0x20000), Static data including the reserved stack exceeds 128 KiB)
+LOAD /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v1_tables.c.o
+LOAD /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v2_v2_tables.c.o
+LOAD /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_start.S.o
+LOAD /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_parse.S.o
+LOAD /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_solve.S.o
+LOAD /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_replay.S.o
+LOAD /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_target.S.o
+LOAD /home/evan/projects/minirubik/rv32/build/asm-v1/distance11-input.o
+OUTPUT(/home/evan/projects/minirubik/rv32/build/asm-v1/distance11.elf elf32-littleriscv)
+
+.comment        0x00000000       0x22
+ .comment       0x00000000       0x22 /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v1_tables.c.o
+                                 0x23 (size before relaxing)
+ .comment       0x00000022       0x23 /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v2_v2_tables.c.o
+
+.riscv.attributes
+                0x00000000       0x1c
+ .riscv.attributes
+                0x00000000       0x1c /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v1_tables.c.o
+ .riscv.attributes
+                0x0000001c       0x1c /home/evan/projects/minirubik/rv32/build/asm-v1/optimized_v2_v2_tables.c.o
+ .riscv.attributes
+                0x00000038       0x1a /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_start.S.o
+ .riscv.attributes
+                0x00000052       0x1a /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_parse.S.o
+ .riscv.attributes
+                0x0000006c       0x1a /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_solve.S.o
+ .riscv.attributes
+                0x00000086       0x1a /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_replay.S.o
+ .riscv.attributes
+                0x000000a0       0x1a /home/evan/projects/minirubik/rv32/build/asm-v1/rv32_asm_v1_target.S.o
+ .riscv.attributes
+                0x000000ba       0x1a /home/evan/projects/minirubik/rv32/build/asm-v1/distance11-input.o

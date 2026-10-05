@@ -1,0 +1,17 @@
+{
+  "baseline_archive_commit": "e0ee4b8260ae296df5c1a675c8a544bc17684ca0",
+  "sha256": {
+    "optimized/v1.c": "f40f61dfd761c3786b229ddda13d04c6480e9a91c2d7318a41092f99a18341da",
+    "optimized/v1.h": "d272b325b4a636138068f1fad70f7487ff7811079060c34d16896b6b2cbfc8b1",
+    "optimized/v1_tables.c": "2d1139f951656389eb4edaa150857b0417fa3bfef90ab966a76ea7f098f38c2f",
+    "optimized_v2/v2.c": "ab1e4cdc59b39ddc62c799d5baf9e636756914e2104df4ece27d42c08a4e7ea7",
+    "optimized_v2/v2.h": "b655e57240a963a01f86f8b812060c25d5641864b657e64cf41c3929af1896c5",
+    "optimized_v2/v2_tables.c": "e30ce61e12847b5889693c86472089ae344ae6d591c162c833c35bed0db6aa0a",
+    "rv32/start.S": "9db4c6cb6c6ac1ec3473145b33fb62910b5c43cf8b0645ac193201c8755c1c3a",
+    "rv32/link.ld": "dee2ef74402b835722831d0d20bd19a9d40974c1412cbe46195c5348bfc8705a",
+    "rv32/inspect_elf.py": "d3ffb6e8570795a8e142bf9af79e9be5162e48f696b06d3d81e9e98d3cf78629",
+    "rv32/target_main.c": "237bbfdfb68382196ab82601598d7fa265c1061711c6ac2fcfe963a8970e4a14",
+    "rv32/build_baseline.py": "19ccd36615b30a44cba69b321f073b00fbf69669d949be82406817b980897d01",
+    "rv32/run_ripes.py": "0d09f6989f4fa50bc0be962a58a1072c5a306b521371ae91375e57365bfde55a"
+  }
+}

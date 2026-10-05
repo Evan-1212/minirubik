@@ -1,0 +1,22 @@
+00001000 00000054 T _start
+00001054 00000160 T asm_parse
+000011b4 0000028c T asm_solve
+00001440 000000c8 T asm_replay
+00001508 000000b8 T target_main
+000015c0 000013b0 R v1_perm_dist
+00002970 00001116 R v1_ori_next
+00003a88 00007620 R v1_perm_next
+0000b0a8 00012b6a R v2_packed
+0001dc14 00000348 R v2_row_offset
+0001df5c 000013b0 R v2_projection
+0001f30c 00000018 R asm_face_rows
+0001f324 R cube_input
+0001f334 R expected_length
+0001f340 B __bss_start
+0001f340 00000090 b asm_frames
+0001f3d0 00000004 B result_length
+0001f3d4 0000000b B result_path
+0001f3e0 B __bss_zero_end
+0001f3e0 B __stack_bottom
+0001fb40 A __global_pointer$
+000203e0 B __stack_top
