@@ -1,0 +1,89 @@
+[
+  {
+    "case": "solved",
+    "input": "12345671111111",
+    "expected_length": 0,
+    "elf_sha256": "d79121f25296db3d54bd765a5d64e4078bc8b6b963783598811cf861288cdaea",
+    "elf": "solved.elf",
+    "isa": "RV32I",
+    "text_bytes": 1856,
+    "static_data_bytes": 126476,
+    "static_sections": [
+      {
+        "name": ".rodata",
+        "address": 5952,
+        "bytes": 122220,
+        "flags": 2
+      },
+      {
+        "name": ".bss",
+        "address": 128176,
+        "bytes": 4256,
+        "flags": 3
+      }
+    ],
+    "reserved_stack_bytes": 4096,
+    "static_limit_bytes": 131072,
+    "static_budget_pass": true,
+    "undefined_symbols": [],
+    "instruction_audit_pass": true
+  },
+  {
+    "case": "short",
+    "input": "25314672313211",
+    "expected_length": 1,
+    "elf_sha256": "4f67ccb22222cc896d0c01bae9e2b03b2d82382c20272e0aa33122714724eac2",
+    "elf": "short.elf",
+    "isa": "RV32I",
+    "text_bytes": 1856,
+    "static_data_bytes": 126476,
+    "static_sections": [
+      {
+        "name": ".rodata",
+        "address": 5952,
+        "bytes": 122220,
+        "flags": 2
+      },
+      {
+        "name": ".bss",
+        "address": 128176,
+        "bytes": 4256,
+        "flags": 3
+      }
+    ],
+    "reserved_stack_bytes": 4096,
+    "static_limit_bytes": 131072,
+    "static_budget_pass": true,
+    "undefined_symbols": [],
+    "instruction_audit_pass": true
+  },
+  {
+    "case": "distance11",
+    "input": "21345671111111",
+    "expected_length": 11,
+    "elf_sha256": "52a6fc489e3aba01a60bd791fa24c72f4edf538f74d11446daf11b1e8b4f0ccf",
+    "elf": "distance11.elf",
+    "isa": "RV32I",
+    "text_bytes": 1856,
+    "static_data_bytes": 126476,
+    "static_sections": [
+      {
+        "name": ".rodata",
+        "address": 5952,
+        "bytes": 122220,
+        "flags": 2
+      },
+      {
+        "name": ".bss",
+        "address": 128176,
+        "bytes": 4256,
+        "flags": 3
+      }
+    ],
+    "reserved_stack_bytes": 4096,
+    "static_limit_bytes": 131072,
+    "static_budget_pass": true,
+    "undefined_symbols": [],
+    "instruction_audit_pass": true
+  }
+]

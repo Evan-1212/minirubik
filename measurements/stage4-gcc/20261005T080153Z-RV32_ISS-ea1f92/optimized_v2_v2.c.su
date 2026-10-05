@@ -1,0 +1,7 @@
+optimized_v2/v2.c:16:10:v2_pattern_distance	16	static
+optimized_v2/v2.c:25:10:v2_heuristic_with	16	static
+optimized_v2/v2.c:43:5:v2_solve_with	64	static
+optimized_v2/v2.c:111:10:v2_heuristic	16	static
+optimized_v2/v2.c:115:5:v2_solve	16	static
+optimized_v2/v2.c:121:8:v2_table_bytes	0	static
+optimized_v2/v2.c:129:8:v2_workspace_bytes	0	static

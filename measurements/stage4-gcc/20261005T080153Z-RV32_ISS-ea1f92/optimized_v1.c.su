@@ -1,0 +1,6 @@
+optimized/v1.c:27:5:v1_parse	16	static
+optimized/v1.c:68:10:v1_heuristic	16	static
+optimized/v1.c:84:5:v1_solve	64	static
+optimized/v1.c:149:5:v1_replay	16	static
+optimized/v1.c:170:8:v1_table_bytes	0	static
+optimized/v1.c:176:8:v1_workspace_bytes	0	static

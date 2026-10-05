@@ -1,0 +1,23 @@
+00001000 00000050 T _start
+00001050 000001b4 T v1_parse
+00001204 000000fc T v1_replay
+00001300 00000350 T v2_solve_with
+00001650 0000001c T v2_solve
+0000166c 000000d4 T target_main
+00001740 000013b0 R v1_perm_dist
+00002af0 00001116 R v1_ori_next
+00003c08 00007620 R v1_perm_next
+0000b228 0000000c R v2_default_pattern
+0000b234 00012b6a R v2_packed
+0001dda0 00000348 R v2_row_offset
+0001e0e8 000013b0 R v2_projection
+0001f498 R cube_input
+0001f4a8 R expected_length
+0001f4b0 B __bss_start
+0001f4b0 00000090 b frames
+0001f540 00000004 B result_length
+0001f544 0000000b B result_path
+0001f550 B __bss_zero_end
+0001f550 B __stack_bottom
+0001fcb0 A __global_pointer$
+00020550 B __stack_top

@@ -1,0 +1,170 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/start.o
+ .data          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/start.o
+ .bss           0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/start.o
+ .text          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1.c.o
+ .data          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1.c.o
+ .bss           0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1.c.o
+ .text.v1_heuristic
+                0x00000000       0x44 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1.c.o
+ .text.v1_solve
+                0x00000000      0x278 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1.c.o
+ .text.v1_table_bytes
+                0x00000000        0xc /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1.c.o
+ .text.v1_workspace_bytes
+                0x00000000        0x8 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1.c.o
+ .bss.frames    0x00000000       0x90 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1.c.o
+ .text          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1_tables.c.o
+ .data          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1_tables.c.o
+ .bss           0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1_tables.c.o
+ .rodata.v1_ori_dist
+                0x00000000      0x2d9 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1_tables.c.o
+ .text          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2.c.o
+ .data          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2.c.o
+ .bss           0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2.c.o
+ .text.v2_pattern_distance
+                0x00000000       0x54 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2.c.o
+ .text.v2_heuristic_with
+                0x00000000       0x70 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2.c.o
+ .text.v2_heuristic
+                0x00000000       0x78 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2.c.o
+ .text.v2_table_bytes
+                0x00000000        0xc /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2.c.o
+ .text.v2_workspace_bytes
+                0x00000000        0x8 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2.c.o
+ .text          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2_tables.c.o
+ .data          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2_tables.c.o
+ .bss           0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2_tables.c.o
+ .srodata.v2_selected_cubies
+                0x00000000        0x3 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2_tables.c.o
+ .text          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/rv32_target_main.c.o
+ .data          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/rv32_target_main.c.o
+ .bss           0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/rv32_target_main.c.o
+ .text          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/distance11-input.o
+ .data          0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/distance11-input.o
+ .bss           0x00000000        0x0 /home/evan/projects/minirubik/rv32/build/gcc/distance11-input.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00001000                        . = 0x1000
+
+.text           0x00001000      0x740
+ *(.text.start)
+ .text.start    0x00001000       0x50 /home/evan/projects/minirubik/rv32/build/gcc/start.o
+                0x00001000                _start
+ *(.text .text.*)
+ .text.v1_parse
+                0x00001050      0x1b4 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1.c.o
+                0x00001050                v1_parse
+ .text.v1_replay
+                0x00001204       0xfc /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1.c.o
+                0x00001204                v1_replay
+ .text.v2_solve_with
+                0x00001300      0x350 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2.c.o
+                0x00001300                v2_solve_with
+ .text.v2_solve
+                0x00001650       0x1c /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2.c.o
+                0x00001650                v2_solve
+ .text.target_main
+                0x0000166c       0xd4 /home/evan/projects/minirubik/rv32/build/gcc/rv32_target_main.c.o
+                0x0000166c                target_main
+                0x00001740                        . = ALIGN (0x10)
+
+.rodata         0x00001740    0x1dd6c
+ *(.rodata .rodata.* .srodata .srodata.*)
+ .rodata.v1_perm_dist
+                0x00001740     0x13b0 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1_tables.c.o
+                0x00001740                v1_perm_dist
+ .rodata.v1_ori_next
+                0x00002af0     0x1116 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1_tables.c.o
+                0x00002af0                v1_ori_next
+ *fill*         0x00003c06        0x2 
+ .rodata.v1_perm_next
+                0x00003c08     0x7620 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1_tables.c.o
+                0x00003c08                v1_perm_next
+ .rodata.v2_default_pattern
+                0x0000b228        0xc /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2_tables.c.o
+                0x0000b228                v2_default_pattern
+ .rodata.v2_packed
+                0x0000b234    0x12b6a /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2_tables.c.o
+                0x0000b234                v2_packed
+ *fill*         0x0001dd9e        0x2 
+ .rodata.v2_row_offset
+                0x0001dda0      0x348 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2_tables.c.o
+                0x0001dda0                v2_row_offset
+ .rodata.v2_projection
+                0x0001e0e8     0x13b0 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2_tables.c.o
+                0x0001e0e8                v2_projection
+ .rodata.input  0x0001f498       0x14 /home/evan/projects/minirubik/rv32/build/gcc/distance11-input.o
+                0x0001f498                cube_input
+                0x0001f4a8                expected_length
+
+.rela.dyn       0x0001f4ac        0x0
+ .rela.text.start
+                0x0001f4ac        0x0 /home/evan/projects/minirubik/rv32/build/gcc/start.o
+                0x0001f4b0                        . = ALIGN (0x10)
+
+.data           0x0001f4b0        0x0
+ *(.data .data.* .sdata .sdata.*)
+                0x0001fcb0                        __global_pointer$ = (ADDR (.data) + 0x800)
+                0x0001f4b0                        . = ALIGN (0x10)
+
+.bss            0x0001f4b0     0x10a0
+                0x0001f4b0                        __bss_start = .
+ *(.bss .bss.* .sbss .sbss.*)
+ .bss.frames    0x0001f4b0       0x90 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2.c.o
+ .sbss.result_length
+                0x0001f540        0x4 /home/evan/projects/minirubik/rv32/build/gcc/rv32_target_main.c.o
+                0x0001f540                result_length
+ .bss.result_path
+                0x0001f544        0xb /home/evan/projects/minirubik/rv32/build/gcc/rv32_target_main.c.o
+                0x0001f544                result_path
+ *(COMMON)
+                0x0001f550                        . = ALIGN (0x10)
+ *fill*         0x0001f54f        0x1 
+                0x0001f550                        __bss_zero_end = .
+                0x0001f550                        __stack_bottom = .
+                0x00020550                        . = (. + 0x1000)
+ *fill*         0x0001f550     0x1000 
+                0x00020550                        __stack_top = .
+                0x00000001                        ASSERT ((((SIZEOF (.rodata) + SIZEOF (.data)) + SIZEOF (.bss)) <= 0x20000), Static data including the reserved stack exceeds 128 KiB)
+LOAD /home/evan/projects/minirubik/rv32/build/gcc/start.o
+LOAD /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1.c.o
+LOAD /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1_tables.c.o
+LOAD /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2.c.o
+LOAD /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2_tables.c.o
+LOAD /home/evan/projects/minirubik/rv32/build/gcc/rv32_target_main.c.o
+LOAD /home/evan/projects/minirubik/rv32/build/gcc/distance11-input.o
+OUTPUT(/home/evan/projects/minirubik/rv32/build/gcc/distance11.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x1c
+ .riscv.attributes
+                0x00000000       0x1a /home/evan/projects/minirubik/rv32/build/gcc/start.o
+ .riscv.attributes
+                0x0000001a       0x1c /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1.c.o
+ .riscv.attributes
+                0x00000036       0x1c /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1_tables.c.o
+ .riscv.attributes
+                0x00000052       0x1c /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2.c.o
+ .riscv.attributes
+                0x0000006e       0x1c /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2_tables.c.o
+ .riscv.attributes
+                0x0000008a       0x1c /home/evan/projects/minirubik/rv32/build/gcc/rv32_target_main.c.o
+ .riscv.attributes
+                0x000000a6       0x1a /home/evan/projects/minirubik/rv32/build/gcc/distance11-input.o
+
+.comment        0x00000000       0x22
+ .comment       0x00000000       0x22 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1.c.o
+                                 0x23 (size before relaxing)
+ .comment       0x00000022       0x23 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v1_tables.c.o
+ .comment       0x00000022       0x23 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2.c.o
+ .comment       0x00000022       0x23 /home/evan/projects/minirubik/rv32/build/gcc/optimized_v2_v2_tables.c.o
+ .comment       0x00000022       0x23 /home/evan/projects/minirubik/rv32/build/gcc/rv32_target_main.c.o
