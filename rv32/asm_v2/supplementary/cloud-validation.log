@@ -1,0 +1,4 @@
+PASS: 3 complete executables, exact distances and physical replay
+PASS: 83 solver samples match v1 paths, exact BFS and physical replay; ABI and invalid arguments
+PASS: depth invariant at every candidate in the sampled executions
+ASM_V2_SUPPLEMENTARY_VALIDATION=PASS
