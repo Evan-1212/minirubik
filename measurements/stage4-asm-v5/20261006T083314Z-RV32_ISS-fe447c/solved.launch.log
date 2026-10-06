@@ -1,0 +1,7 @@
+Start-Process : �L�k����o�өR�O�A�]���o�Ϳ��~: ���ε{�������h�w���ꦹ�ɮסC�C
+��� �u��:1 �r��:39
++ ... Stop'; $p = Start-Process -FilePath 'C:\Tools\Ripes\Ripes.exe' -Worki ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Start-Process]�AInvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.StartProcessCommand
+ 

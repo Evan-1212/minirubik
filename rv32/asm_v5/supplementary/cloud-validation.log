@@ -1,0 +1,7 @@
+PASS: 3 complete executables, exact distances, physical replay, stack limits
+PASS: parser covers all 5040 permutations and all 729 orientation coordinates
+PASS: all 2187 orientation/seventh-trit combinations match the native parser
+PASS: 3840 byte mutations, NUL/page boundaries, unaligned input and null arguments; unchanged failure output
+PASS: 21 aligned input/output overlap cases
+PASS: 83 parse/solve/replay samples match archived paths and exact BFS; ABI
+ASM_V5_SUPPLEMENTARY_VALIDATION=PASS

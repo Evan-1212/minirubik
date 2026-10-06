@@ -1,0 +1,17 @@
+{
+  "variant": "asm-v5",
+  "asm_v4_reference_archive": "/home/evan/projects/minirubik/measurements/stage4-asm-v4/20261006T032552Z-RV32_ISS-b5f010",
+  "reference_archive": "/home/evan/projects/minirubik/measurements/stage4-gcc/20261005T080153Z-RV32_ISS-ea1f92",
+  "timestamp_utc": "2026-10-06T08:33:14.382885+00:00",
+  "processor": "RV32_ISS",
+  "pinned_ripes_version": "v2.2.6-106-g5b8a616 (version recorded in Stage 1)",
+  "ripes_executable": "C:\\Tools\\Ripes\\Ripes.exe",
+  "ripes_sha256": "bd2ddea8cd6fcf6902cda7366fe99ab6dd0c7fdbbc7efcfdb89ede20acc67f0f",
+  "windows_working_directory": "C:\\Tools\\Ripes\\hw1_stage4_asm_v5\\20261006T083314Z-RV32_ISS-fe447c",
+  "renderer": false,
+  "measurement_scope": "Startup, parse, solve, replay, length check, exit ecall",
+  "status": "INCOMPLETE",
+  "commands": [
+    "$ErrorActionPreference = 'Stop'; $p = Start-Process -FilePath 'C:\\Tools\\Ripes\\Ripes.exe' -WorkingDirectory 'C:\\Tools\\Ripes\\hw1_stage4_asm_v5\\20261006T083314Z-RV32_ISS-fe447c' -ArgumentList '--mode cli --src solved.elf -t elf --proc RV32_ISS --timeout 120000 --iret --regs --runinfo --exectime --json --output solved.json' -PassThru -Wait; exit $p.ExitCode"
+  ]
+}
