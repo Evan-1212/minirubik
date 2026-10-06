@@ -1,0 +1,43 @@
+{
+  "rank": 526325,
+  "input": "21345763332233",
+  "started_at": "2026-10-06T11:59:13.514553+00:00",
+  "elf_sha256": "84ed93473a1a2e42f7e7f8a372f7d37092f3fb5220222085090a636faf497701",
+  "input_source_sha256": "77bada66e6263250da7d7c1022a5ab297068a67e89424a3191541c06f30e3ae9",
+  "build_commands": [
+    [
+      "riscv64-unknown-elf-gcc",
+      "-march=rv32i",
+      "-mabi=ilp32",
+      "-c",
+      "/home/evan/projects/minirubik/rv32/build/distance11/link/input.S",
+      "-o",
+      "/home/evan/projects/minirubik/rv32/build/distance11/link/input.o"
+    ],
+    [
+      "riscv64-unknown-elf-gcc",
+      "-march=rv32i",
+      "-mabi=ilp32",
+      "-nostdlib",
+      "-Wl,--gc-sections",
+      "-Wl,--build-id=none",
+      "-Wl,-T,/home/evan/projects/minirubik/rv32/link.ld",
+      "-Wl,-Map,/home/evan/projects/minirubik/rv32/build/distance11/link/case.map",
+      "/home/evan/projects/minirubik/rv32/build/distance11/optimized_v1_tables.c.o",
+      "/home/evan/projects/minirubik/rv32/build/distance11/optimized_v2_v2_tables.c.o",
+      "/home/evan/projects/minirubik/rv32/build/distance11/rv32_start.S.o",
+      "/home/evan/projects/minirubik/rv32/build/distance11/rv32_asm_v5_parse.S.o",
+      "/home/evan/projects/minirubik/rv32/build/distance11/rv32_asm_v4_solve.S.o",
+      "/home/evan/projects/minirubik/rv32/build/distance11/rv32_asm_v1_replay.S.o",
+      "/home/evan/projects/minirubik/rv32/build/distance11/rv32_asm_v1_target.S.o",
+      "/home/evan/projects/minirubik/rv32/build/distance11/link/input.o",
+      "-o",
+      "/home/evan/projects/minirubik/rv32/build/distance11/link/case.elf"
+    ]
+  ],
+  "command": "$ErrorActionPreference = 'Stop'; $p = Start-Process -FilePath 'C:\\Tools\\Ripes\\Ripes.exe' -WorkingDirectory 'C:\\Tools\\Ripes\\hw1_stage4_distance11\\20261006T114648Z-RV32_ISS-0d1d38' -ArgumentList '--mode cli --src d11-0526325.elf -t elf --proc RV32_ISS --timeout 120000 --iret --regs --runinfo --exectime --json --output 0526325-e6a529c396ac.json' -PassThru -Wait; exit $p.ExitCode",
+  "raw_report": "0526325-e6a529c396ac.json",
+  "returncode": 0,
+  "raw_sha256": "35aff28311210fb6270a36f20add882f644a89d8a4f317881d9dfb354b91e172",
+  "finished_at": "2026-10-06T11:59:14.752483+00:00"
+}

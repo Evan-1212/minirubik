@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "expected_cases": 2644,
+  "passed_cases": 2644,
+  "instruction_limit": 50000000,
+  "processor": "RV32_ISS",
+  "renderer": false,
+  "text_bytes": 1428,
+  "static_data_bytes": 126488,
+  "minimum_retired_instructions": 311381,
+  "mean_retired_instructions": 776401.5661875946,
+  "maximum_retired_instructions": 4391914,
+  "worst_input": "41532672313211",
+  "note": "Full gate PASS requires all 2,644 exact BFS distance-11 states; partial results are not PASS."
+}

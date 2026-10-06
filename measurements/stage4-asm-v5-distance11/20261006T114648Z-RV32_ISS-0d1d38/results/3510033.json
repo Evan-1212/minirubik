@@ -1,0 +1,15 @@
+{
+  "rank": 3510033,
+  "input": "75143263231313",
+  "processor": "RV32_ISS",
+  "length": 11,
+  "status": 0,
+  "retired_instructions": 1114495,
+  "text_bytes": 1428,
+  "static_data_bytes": 126488,
+  "elf_sha256": "216505cdaec0551d2f47ee0a80edfe1b366e8f5f74f588ec20720a26da581adc",
+  "raw_report": "3510033-f84aeec2d3f4.json",
+  "raw_sha256": "6cd7d591db017dc31036577921d386ac34a821282bde5edc4015fc5c57a2741f",
+  "attempt": "3510033-f84aeec2d3f4",
+  "completed_at": "2026-10-06T12:44:18.063300+00:00"
+}
