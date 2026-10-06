@@ -1,0 +1,32 @@
+[
+  {
+    "case": "solved",
+    "input": "12345671111111",
+    "gcc_iret": 566,
+    "asm_iret": 662,
+    "instruction_reduction_percent": -16.96113074204947,
+    "gcc_text_bytes": 1856,
+    "asm_text_bytes": 1444,
+    "text_reduction_percent": 22.198275862068964
+  },
+  {
+    "case": "short",
+    "input": "25314672313211",
+    "gcc_iret": 827,
+    "asm_iret": 858,
+    "instruction_reduction_percent": -3.7484885126964933,
+    "gcc_text_bytes": 1856,
+    "asm_text_bytes": 1444,
+    "text_reduction_percent": 22.198275862068964
+  },
+  {
+    "case": "distance11",
+    "input": "21345671111111",
+    "gcc_iret": 2502568,
+    "asm_iret": 1468314,
+    "instruction_reduction_percent": 41.3277081781594,
+    "gcc_text_bytes": 1856,
+    "asm_text_bytes": 1444,
+    "text_reduction_percent": 22.198275862068964
+  }
+]

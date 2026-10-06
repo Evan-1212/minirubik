@@ -1,0 +1,179 @@
+{
+  "status": "PASS",
+  "gcc": "riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0",
+  "linker": "GNU ld (2.42-1ubuntu1+6) 2.42",
+  "note": "Assembly v4 built and validated here. Preserved source and measurement fingerprints checked without rerunning old builds. Official local Ripes results pending.",
+  "build_provenance": {
+    "variant": "asm-v4",
+    "timestamp_utc": "2026-10-06T03:12:20.099652+00:00",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "host": "2df245104c71",
+    "gcc": "riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0",
+    "linker": "GNU ld (2.42-1ubuntu1+6) 2.42",
+    "source_commit": "75bbda752b6d6e98e324268aaabbc6cbb62cbcd2",
+    "worktree_status": "?? rv32/asm_v4/",
+    "note": "Source hashes identify uncommitted assembly files and unchanged table sources.",
+    "c_flags": [
+      "-O2",
+      "-march=rv32i",
+      "-mabi=ilp32",
+      "-std=c99",
+      "-ffreestanding",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-Wall",
+      "-Wextra",
+      "-Werror"
+    ],
+    "renderer": false,
+    "statistics": false,
+    "lto": false,
+    "maximum_stack_bytes_by_call_graph": 80,
+    "solver_early_return_stack_bytes": 0,
+    "stack_call_graph": {
+      "_start": 0,
+      "target_main": 32,
+      "asm_parse": 16,
+      "asm_solve": 48,
+      "asm_replay": 0
+    },
+    "measurement_scope": "Startup, parse, solve, replay, length check, exit ecall",
+    "sha256": {
+      "optimized/v1_tables.c": "2d1139f951656389eb4edaa150857b0417fa3bfef90ab966a76ea7f098f38c2f",
+      "optimized_v2/v2_tables.c": "e30ce61e12847b5889693c86472089ae344ae6d591c162c833c35bed0db6aa0a",
+      "rv32/start.S": "9db4c6cb6c6ac1ec3473145b33fb62910b5c43cf8b0645ac193201c8755c1c3a",
+      "rv32/asm_v1/parse.S": "0e10ff2c98328ac1a54827add11bef83d9a3443c912330c696a3dda9a4931b57",
+      "rv32/asm_v4/solve.S": "4b973ca417ec2002d681b138618769d2bd74a0fa0db3da0e0ac444c3cb63e17f",
+      "rv32/asm_v1/replay.S": "bbae7e61254a3ec49efc3626a165895bbdef8aba7aabc822a56e56c6a74fc82f",
+      "rv32/asm_v1/target.S": "b1c8bd16f4697b3eab0f51786abd58662e55ac5add3aed0dc773eff395e16b47",
+      "optimized/v1.h": "d272b325b4a636138068f1fad70f7487ff7811079060c34d16896b6b2cbfc8b1",
+      "optimized_v2/v2.h": "b655e57240a963a01f86f8b812060c25d5641864b657e64cf41c3929af1896c5",
+      "rv32/link.ld": "dee2ef74402b835722831d0d20bd19a9d40974c1412cbe46195c5348bfc8705a",
+      "rv32/inspect_elf.py": "d3ffb6e8570795a8e142bf9af79e9be5162e48f696b06d3d81e9e98d3cf78629",
+      "rv32/asm_v4/README.md": "5fa1c2399728a60bf253ec33121b54ee3ef47aec61eefc296e50d5d41491286b",
+      "rv32/asm_v4/baseline-files.json": "5eeceb9e7197d4a79ace8859388b2c7241401d3692a25f98dad35df1d6808d19",
+      "rv32/asm_v4/build.py": "eaf400a363947cbe81d132e118ddaac279efdb1aa351b9717736a302488969b7",
+      "rv32/asm_v4/run.py": "51a4156553afa85d0e41f0462e545061259b97a59f9ddbe5525fadd09d15c27d",
+      "rv32/asm_v4/validate.py": "362a4a33bd8dcfe11547fbd9ff4f6c2b6ed71e426ff5688469030160b0db3d0c",
+      "rv32/build/asm-v4/solved-input.S": "0dade0761cd9ae713bda970b1d9a8e95bad5cdb4f6d2726ffb07ab05c5c283ee",
+      "rv32/build/asm-v4/short-input.S": "17e3e1c3658c2ac07d1921c053ed8d0281a8db42d94d8e42892bad37443398d6",
+      "rv32/build/asm-v4/distance11-input.S": "3edc6acd419c9ae521571a2310a0403cf59b2839042cea756f3e50838acf72ae"
+    }
+  },
+  "cases": [
+    {
+      "case": "solved",
+      "input": "12345671111111",
+      "expected_length": 0,
+      "elf_sha256": "b908c8a0e7e9f434bd7d9426d69fcd18f762c0f70922e7a67b915764a12199d1",
+      "elf": "solved.elf",
+      "isa": "RV32I",
+      "text_bytes": 1444,
+      "static_data_bytes": 126488,
+      "static_sections": [
+        {
+          "name": ".rodata",
+          "address": 5552,
+          "bytes": 122232,
+          "flags": 2
+        },
+        {
+          "name": ".bss",
+          "address": 127792,
+          "bytes": 4256,
+          "flags": 3
+        }
+      ],
+      "reserved_stack_bytes": 4096,
+      "static_limit_bytes": 131072,
+      "static_budget_pass": true,
+      "undefined_symbols": [],
+      "instruction_audit_pass": true,
+      "handwritten_runtime_symbols": [
+        "_start",
+        "asm_parse",
+        "asm_replay",
+        "asm_solve",
+        "target_main"
+      ],
+      "maximum_stack_bytes_by_call_graph": 80,
+      "solver_early_return_stack_bytes": 0
+    },
+    {
+      "case": "short",
+      "input": "25314672313211",
+      "expected_length": 1,
+      "elf_sha256": "ea7b6827563ece8cde69c108da55f8a8f7389c0c255eced570a39ad5876f3648",
+      "elf": "short.elf",
+      "isa": "RV32I",
+      "text_bytes": 1444,
+      "static_data_bytes": 126488,
+      "static_sections": [
+        {
+          "name": ".rodata",
+          "address": 5552,
+          "bytes": 122232,
+          "flags": 2
+        },
+        {
+          "name": ".bss",
+          "address": 127792,
+          "bytes": 4256,
+          "flags": 3
+        }
+      ],
+      "reserved_stack_bytes": 4096,
+      "static_limit_bytes": 131072,
+      "static_budget_pass": true,
+      "undefined_symbols": [],
+      "instruction_audit_pass": true,
+      "handwritten_runtime_symbols": [
+        "_start",
+        "asm_parse",
+        "asm_replay",
+        "asm_solve",
+        "target_main"
+      ],
+      "maximum_stack_bytes_by_call_graph": 80,
+      "solver_early_return_stack_bytes": 0
+    },
+    {
+      "case": "distance11",
+      "input": "21345671111111",
+      "expected_length": 11,
+      "elf_sha256": "9c0f4c40122bee696fa4d3382e43690c604c96b334ea841f41e1a495bc44415a",
+      "elf": "distance11.elf",
+      "isa": "RV32I",
+      "text_bytes": 1444,
+      "static_data_bytes": 126488,
+      "static_sections": [
+        {
+          "name": ".rodata",
+          "address": 5552,
+          "bytes": 122232,
+          "flags": 2
+        },
+        {
+          "name": ".bss",
+          "address": 127792,
+          "bytes": 4256,
+          "flags": 3
+        }
+      ],
+      "reserved_stack_bytes": 4096,
+      "static_limit_bytes": 131072,
+      "static_budget_pass": true,
+      "undefined_symbols": [],
+      "instruction_audit_pass": true,
+      "handwritten_runtime_symbols": [
+        "_start",
+        "asm_parse",
+        "asm_replay",
+        "asm_solve",
+        "target_main"
+      ],
+      "maximum_stack_bytes_by_call_graph": 80,
+      "solver_early_return_stack_bytes": 0
+    }
+  ]
+}

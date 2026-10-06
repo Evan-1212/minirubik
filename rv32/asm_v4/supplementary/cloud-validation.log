@@ -1,0 +1,5 @@
+PASS: 3 complete executables, exact distances and physical replay
+PASS: 83 solver samples match preserved paths, v3 candidate counts, exact BFS and physical replay; ABI
+PASS: candidate depth/cursor invariants and parent continuation at every sampled descent/backtrack
+PASS: 2 solved and 8 invalid-argument early returns preserve ABI, touch no data memory and use no stack
+ASM_V4_SUPPLEMENTARY_VALIDATION=PASS

@@ -1,0 +1,4904 @@
+{
+  "status": "PASS",
+  "timestamp_utc": "2026-10-06T03:12:30.187222+00:00",
+  "environment": "Supplementary Unicorn RV32 execution; NOT Ripes",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "unicorn_version": "2.1.4",
+  "limitations": "No official retired-instruction counts; not exhaustive assembly validation or the full distance-11 gate.",
+  "source_change": "Active cursor, face, turn and previous face stay in registers; continuations spill only on descent and reload on backtrack",
+  "build_provenance": {
+    "variant": "asm-v4",
+    "timestamp_utc": "2026-10-06T03:12:20.099652+00:00",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "host": "2df245104c71",
+    "gcc": "riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0",
+    "linker": "GNU ld (2.42-1ubuntu1+6) 2.42",
+    "source_commit": "75bbda752b6d6e98e324268aaabbc6cbb62cbcd2",
+    "worktree_status": "?? rv32/asm_v4/",
+    "note": "Source hashes identify uncommitted assembly files and unchanged table sources.",
+    "c_flags": [
+      "-O2",
+      "-march=rv32i",
+      "-mabi=ilp32",
+      "-std=c99",
+      "-ffreestanding",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-Wall",
+      "-Wextra",
+      "-Werror"
+    ],
+    "renderer": false,
+    "statistics": false,
+    "lto": false,
+    "maximum_stack_bytes_by_call_graph": 80,
+    "solver_early_return_stack_bytes": 0,
+    "stack_call_graph": {
+      "_start": 0,
+      "target_main": 32,
+      "asm_parse": 16,
+      "asm_solve": 48,
+      "asm_replay": 0
+    },
+    "measurement_scope": "Startup, parse, solve, replay, length check, exit ecall",
+    "sha256": {
+      "optimized/v1_tables.c": "2d1139f951656389eb4edaa150857b0417fa3bfef90ab966a76ea7f098f38c2f",
+      "optimized_v2/v2_tables.c": "e30ce61e12847b5889693c86472089ae344ae6d591c162c833c35bed0db6aa0a",
+      "rv32/start.S": "9db4c6cb6c6ac1ec3473145b33fb62910b5c43cf8b0645ac193201c8755c1c3a",
+      "rv32/asm_v1/parse.S": "0e10ff2c98328ac1a54827add11bef83d9a3443c912330c696a3dda9a4931b57",
+      "rv32/asm_v4/solve.S": "4b973ca417ec2002d681b138618769d2bd74a0fa0db3da0e0ac444c3cb63e17f",
+      "rv32/asm_v1/replay.S": "bbae7e61254a3ec49efc3626a165895bbdef8aba7aabc822a56e56c6a74fc82f",
+      "rv32/asm_v1/target.S": "b1c8bd16f4697b3eab0f51786abd58662e55ac5add3aed0dc773eff395e16b47",
+      "optimized/v1.h": "d272b325b4a636138068f1fad70f7487ff7811079060c34d16896b6b2cbfc8b1",
+      "optimized_v2/v2.h": "b655e57240a963a01f86f8b812060c25d5641864b657e64cf41c3929af1896c5",
+      "rv32/link.ld": "dee2ef74402b835722831d0d20bd19a9d40974c1412cbe46195c5348bfc8705a",
+      "rv32/inspect_elf.py": "d3ffb6e8570795a8e142bf9af79e9be5162e48f696b06d3d81e9e98d3cf78629",
+      "rv32/asm_v4/README.md": "5fa1c2399728a60bf253ec33121b54ee3ef47aec61eefc296e50d5d41491286b",
+      "rv32/asm_v4/baseline-files.json": "5eeceb9e7197d4a79ace8859388b2c7241401d3692a25f98dad35df1d6808d19",
+      "rv32/asm_v4/build.py": "eaf400a363947cbe81d132e118ddaac279efdb1aa351b9717736a302488969b7",
+      "rv32/asm_v4/run.py": "51a4156553afa85d0e41f0462e545061259b97a59f9ddbe5525fadd09d15c27d",
+      "rv32/asm_v4/validate.py": "362a4a33bd8dcfe11547fbd9ff4f6c2b6ed71e426ff5688469030160b0db3d0c",
+      "rv32/build/asm-v4/solved-input.S": "0dade0761cd9ae713bda970b1d9a8e95bad5cdb4f6d2726ffb07ab05c5c283ee",
+      "rv32/build/asm-v4/short-input.S": "17e3e1c3658c2ac07d1921c053ed8d0281a8db42d94d8e42892bad37443398d6",
+      "rv32/build/asm-v4/distance11-input.S": "3edc6acd419c9ae521571a2310a0403cf59b2839042cea756f3e50838acf72ae"
+    }
+  },
+  "source_sha256": {
+    "rv32/asm_v4/solve.S": "4b973ca417ec2002d681b138618769d2bd74a0fa0db3da0e0ac444c3cb63e17f",
+    "rv32/asm_v4/validate.py": "362a4a33bd8dcfe11547fbd9ff4f6c2b6ed71e426ff5688469030160b0db3d0c",
+    "rv32/asm_v1/supplementary/cloud-validation.json": "888ec3a5df77bda306f90e06eb762a8e20c9ca47220636701c4527efe5ba17d1",
+    "rv32/asm_v3/supplementary/cloud-validation.json": "72b62a079f3e27506a99f4a833a3daf7f0212cc01ff937437c2116321275bd94",
+    "rv32/asm_v1/testing/oracle_bridge.c": "438b5bf6ed4542ab02d77a1b193cd8ba44963c7bf2f5563f7af3757957d2f1bc",
+    "optimized/v1.c": "f40f61dfd761c3786b229ddda13d04c6480e9a91c2d7318a41092f99a18341da",
+    "optimized/v1_tables.c": "2d1139f951656389eb4edaa150857b0417fa3bfef90ab966a76ea7f098f38c2f",
+    "optimized_v2/v2.c": "ab1e4cdc59b39ddc62c799d5baf9e636756914e2104df4ece27d42c08a4e7ea7",
+    "optimized_v2/v2_tables.c": "e30ce61e12847b5889693c86472089ae344ae6d591c162c833c35bed0db6aa0a",
+    "optimized_v2/host_oracle.h": "cbe82fdaa87bd5c8846b7e90857bf4dc59f69e957a5762b7e5e5aaad4940918b",
+    "optimized/host_reference.h": "b516b4ea6a24cda7d40a90fa138b0e030d2c807b35d6edf73c92fc7e891df937",
+    "solver.c": "562764bae4a5ca52a57ea82ac7a8490b09f92805ae3fd5bde1a4e67af82fbdfc"
+  },
+  "native_oracle_build_command": [
+    "cc",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "/workspace/scratch/6266f42a824a/asm-v4-work/rv32/asm_v1/testing/oracle_bridge.c",
+    "/workspace/scratch/6266f42a824a/asm-v4-work/optimized/v1.c",
+    "/workspace/scratch/6266f42a824a/asm-v4-work/optimized/v1_tables.c",
+    "/workspace/scratch/6266f42a824a/asm-v4-work/optimized_v2/v2.c",
+    "/workspace/scratch/6266f42a824a/asm-v4-work/optimized_v2/v2_tables.c",
+    "-o",
+    "/workspace/scratch/6266f42a824a/asm-v4-work/rv32/build/asm-v4/supplementary/oracle.so"
+  ],
+  "entry_results": [
+    {
+      "case": "solved",
+      "input": "12345671111111",
+      "status": 0,
+      "length": 0,
+      "candidate_visits": 0,
+      "stack_written_bytes": 48,
+      "elf_sha256": "b908c8a0e7e9f434bd7d9426d69fcd18f762c0f70922e7a67b915764a12199d1"
+    },
+    {
+      "case": "short",
+      "input": "25314672313211",
+      "status": 0,
+      "length": 1,
+      "candidate_visits": 3,
+      "stack_written_bytes": 80,
+      "elf_sha256": "ea7b6827563ece8cde69c108da55f8a8f7389c0c255eced570a39ad5876f3648"
+    },
+    {
+      "case": "distance11",
+      "input": "21345671111111",
+      "status": 0,
+      "length": 11,
+      "candidate_visits": 35847,
+      "stack_written_bytes": 80,
+      "elf_sha256": "9c0f4c40122bee696fa4d3382e43690c604c96b334ea841f41e1a495bc44415a"
+    }
+  ],
+  "early_return_cases": [
+    {
+      "arguments": [
+        0,
+        0,
+        2425344
+      ],
+      "return_value": 0,
+      "data_accesses": 0,
+      "stack_written_bytes": 0,
+      "emulator_instruction_visits": 9
+    },
+    {
+      "arguments": [
+        0,
+        0,
+        4194303
+      ],
+      "return_value": 0,
+      "data_accesses": 0,
+      "stack_written_bytes": 0,
+      "emulator_instruction_visits": 9
+    },
+    {
+      "arguments": [
+        0,
+        0,
+        0
+      ],
+      "return_value": 4294967295,
+      "data_accesses": 0,
+      "stack_written_bytes": 0,
+      "emulator_instruction_visits": 3
+    },
+    {
+      "arguments": [
+        1,
+        0,
+        0
+      ],
+      "return_value": 4294967295,
+      "data_accesses": 0,
+      "stack_written_bytes": 0,
+      "emulator_instruction_visits": 3
+    },
+    {
+      "arguments": [
+        5040,
+        0,
+        2425344
+      ],
+      "return_value": 4294967295,
+      "data_accesses": 0,
+      "stack_written_bytes": 0,
+      "emulator_instruction_visits": 6
+    },
+    {
+      "arguments": [
+        0,
+        729,
+        2425344
+      ],
+      "return_value": 4294967295,
+      "data_accesses": 0,
+      "stack_written_bytes": 0,
+      "emulator_instruction_visits": 8
+    },
+    {
+      "arguments": [
+        5039,
+        729,
+        2425344
+      ],
+      "return_value": 4294967295,
+      "data_accesses": 0,
+      "stack_written_bytes": 0,
+      "emulator_instruction_visits": 8
+    },
+    {
+      "arguments": [
+        5040,
+        728,
+        2425344
+      ],
+      "return_value": 4294967295,
+      "data_accesses": 0,
+      "stack_written_bytes": 0,
+      "emulator_instruction_visits": 6
+    },
+    {
+      "arguments": [
+        4294967295,
+        0,
+        2425344
+      ],
+      "return_value": 4294967295,
+      "data_accesses": 0,
+      "stack_written_bytes": 0,
+      "emulator_instruction_visits": 6
+    },
+    {
+      "arguments": [
+        0,
+        4294967295,
+        2425344
+      ],
+      "return_value": 4294967295,
+      "data_accesses": 0,
+      "stack_written_bytes": 0,
+      "emulator_instruction_visits": 8
+    }
+  ],
+  "solver_sample_count": 83,
+  "sampled_candidate_visits": 426830,
+  "sampled_descents": 71108,
+  "sampled_backtracks": 70472,
+  "abi_checks": "sp, gp, tp, s0..s11 preserved on every completed direct call",
+  "search_results": [
+    {
+      "input": "12345671111111",
+      "length": 0,
+      "candidate_visits": 0,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 0,
+      "backtracks": 0,
+      "face_turns": [],
+      "descent_turns": [],
+      "bounds": []
+    },
+    {
+      "input": "12345671111123",
+      "length": 10,
+      "candidate_visits": 2690,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 448,
+      "backtracks": 439,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "input": "12345673333331",
+      "length": 8,
+      "candidate_visits": 112,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 19,
+      "backtracks": 12,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "input": "12374561111111",
+      "length": 5,
+      "candidate_visits": 98,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 14,
+      "backtracks": 10,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        4,
+        5
+      ]
+    },
+    {
+      "input": "12374561111123",
+      "length": 9,
+      "candidate_visits": 3206,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 532,
+      "backtracks": 524,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "12374563333322",
+      "length": 8,
+      "candidate_visits": 146,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 25,
+      "backtracks": 18,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        8
+      ]
+    },
+    {
+      "input": "12374563333331",
+      "length": 9,
+      "candidate_visits": 662,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 111,
+      "backtracks": 103,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        8,
+        9
+      ]
+    },
+    {
+      "input": "12543763212332",
+      "length": 8,
+      "candidate_visits": 175,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 30,
+      "backtracks": 23,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8
+      ]
+    },
+    {
+      "input": "12734561111111",
+      "length": 10,
+      "candidate_visits": 4950,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 822,
+      "backtracks": 813,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "input": "12734561111123",
+      "length": 9,
+      "candidate_visits": 1814,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 300,
+      "backtracks": 292,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "12734563333322",
+      "length": 9,
+      "candidate_visits": 668,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 111,
+      "backtracks": 103,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "12734563333331",
+      "length": 8,
+      "candidate_visits": 250,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 41,
+      "backtracks": 34,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8
+      ]
+    },
+    {
+      "input": "13254671223113",
+      "length": 9,
+      "candidate_visits": 224,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 38,
+      "backtracks": 30,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "14572362131123",
+      "length": 9,
+      "candidate_visits": 449,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 72,
+      "backtracks": 64,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "16375242133112",
+      "length": 9,
+      "candidate_visits": 1054,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 174,
+      "backtracks": 166,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "16457323212233",
+      "length": 8,
+      "candidate_visits": 401,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 67,
+      "backtracks": 60,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8
+      ]
+    },
+    {
+      "input": "17362453313231",
+      "length": 9,
+      "candidate_visits": 1711,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 283,
+      "backtracks": 275,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "21345671111111",
+      "length": 11,
+      "candidate_visits": 35847,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 5974,
+      "backtracks": 5964,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "input": "23175462332321",
+      "length": 9,
+      "candidate_visits": 171,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 29,
+      "backtracks": 21,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        8,
+        9
+      ]
+    },
+    {
+      "input": "23416571131133",
+      "length": 8,
+      "candidate_visits": 202,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 35,
+      "backtracks": 28,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8
+      ]
+    },
+    {
+      "input": "23514673233212",
+      "length": 8,
+      "candidate_visits": 208,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 35,
+      "backtracks": 28,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8
+      ]
+    },
+    {
+      "input": "23561471211311",
+      "length": 9,
+      "candidate_visits": 328,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 55,
+      "backtracks": 47,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "24316572122213",
+      "length": 8,
+      "candidate_visits": 172,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 29,
+      "backtracks": 22,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8
+      ]
+    },
+    {
+      "input": "24513763133333",
+      "length": 9,
+      "candidate_visits": 2167,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 361,
+      "backtracks": 353,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "25314672313211",
+      "length": 1,
+      "candidate_visits": 3,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 0,
+      "backtracks": 0,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "descent_turns": [],
+      "bounds": [
+        1
+      ]
+    },
+    {
+      "input": "25416373331111",
+      "length": 10,
+      "candidate_visits": 6731,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 1119,
+      "backtracks": 1110,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "input": "25713642221111",
+      "length": 8,
+      "candidate_visits": 93,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 16,
+      "backtracks": 9,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "input": "26431753122332",
+      "length": 10,
+      "candidate_visits": 4909,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 816,
+      "backtracks": 807,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "input": "26735413333211",
+      "length": 8,
+      "candidate_visits": 32,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 7,
+      "backtracks": 0,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        8
+      ]
+    },
+    {
+      "input": "27345611111111",
+      "length": 10,
+      "candidate_visits": 9372,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 1559,
+      "backtracks": 1550,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "input": "27345611111123",
+      "length": 10,
+      "candidate_visits": 2584,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 431,
+      "backtracks": 422,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "input": "27345613333322",
+      "length": 9,
+      "candidate_visits": 1086,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 180,
+      "backtracks": 172,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "27345613333331",
+      "length": 10,
+      "candidate_visits": 1922,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 319,
+      "backtracks": 310,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "input": "31564273332233",
+      "length": 9,
+      "candidate_visits": 1522,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 253,
+      "backtracks": 245,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "32165743232312",
+      "length": 9,
+      "candidate_visits": 290,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 51,
+      "backtracks": 43,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        8,
+        9
+      ]
+    },
+    {
+      "input": "32456173122323",
+      "length": 9,
+      "candidate_visits": 1984,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 330,
+      "backtracks": 322,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "32617452233213",
+      "length": 9,
+      "candidate_visits": 2725,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 452,
+      "backtracks": 444,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "32674152111332",
+      "length": 6,
+      "candidate_visits": 38,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 7,
+      "backtracks": 2,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6
+      ]
+    },
+    {
+      "input": "34156272221333",
+      "length": 9,
+      "candidate_visits": 684,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 115,
+      "backtracks": 107,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "34215671122232",
+      "length": 7,
+      "candidate_visits": 103,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 18,
+      "backtracks": 12,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7
+      ]
+    },
+    {
+      "input": "34215673321232",
+      "length": 9,
+      "candidate_visits": 346,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 58,
+      "backtracks": 50,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "34567121111111",
+      "length": 9,
+      "candidate_visits": 1550,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 257,
+      "backtracks": 249,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "34567121111123",
+      "length": 8,
+      "candidate_visits": 94,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 15,
+      "backtracks": 8,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "input": "34567123333322",
+      "length": 9,
+      "candidate_visits": 642,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 110,
+      "backtracks": 102,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        8,
+        9
+      ]
+    },
+    {
+      "input": "34567123333331",
+      "length": 7,
+      "candidate_visits": 64,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 11,
+      "backtracks": 5,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7
+      ]
+    },
+    {
+      "input": "34567211111111",
+      "length": 10,
+      "candidate_visits": 44146,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 7354,
+      "backtracks": 7345,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "input": "34567211111123",
+      "length": 9,
+      "candidate_visits": 509,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 84,
+      "backtracks": 76,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "34567213333322",
+      "length": 8,
+      "candidate_visits": 266,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 44,
+      "backtracks": 37,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "input": "34567213333331",
+      "length": 9,
+      "candidate_visits": 905,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 152,
+      "backtracks": 144,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        8,
+        9
+      ]
+    },
+    {
+      "input": "34751261132312",
+      "length": 9,
+      "candidate_visits": 1603,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 268,
+      "backtracks": 260,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "37465123211222",
+      "length": 9,
+      "candidate_visits": 2638,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 440,
+      "backtracks": 432,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "37514621131223",
+      "length": 8,
+      "candidate_visits": 183,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 30,
+      "backtracks": 23,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8
+      ]
+    },
+    {
+      "input": "37654123233323",
+      "length": 10,
+      "candidate_visits": 5284,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 877,
+      "backtracks": 868,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "input": "41325672331223",
+      "length": 8,
+      "candidate_visits": 352,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 58,
+      "backtracks": 51,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8
+      ]
+    },
+    {
+      "input": "41532672313211",
+      "length": 11,
+      "candidate_visits": 109629,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 18267,
+      "backtracks": 18257,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "input": "42175362213122",
+      "length": 8,
+      "candidate_visits": 105,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 17,
+      "backtracks": 10,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8
+      ]
+    },
+    {
+      "input": "42531761321333",
+      "length": 10,
+      "candidate_visits": 2362,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 393,
+      "backtracks": 384,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "input": "42713653123232",
+      "length": 10,
+      "candidate_visits": 7431,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 1239,
+      "backtracks": 1230,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "input": "43752611332133",
+      "length": 9,
+      "candidate_visits": 195,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 34,
+      "backtracks": 26,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        8,
+        9
+      ]
+    },
+    {
+      "input": "45176323211222",
+      "length": 9,
+      "candidate_visits": 307,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 51,
+      "backtracks": 43,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "47632511322113",
+      "length": 8,
+      "candidate_visits": 20,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 7,
+      "backtracks": 0,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        8
+      ]
+    },
+    {
+      "input": "52134763321232",
+      "length": 10,
+      "candidate_visits": 4193,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 698,
+      "backtracks": 689,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "input": "52136473123313",
+      "length": 8,
+      "candidate_visits": 153,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 26,
+      "backtracks": 19,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8
+      ]
+    },
+    {
+      "input": "52637143221122",
+      "length": 8,
+      "candidate_visits": 24,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 7,
+      "backtracks": 0,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        8
+      ]
+    },
+    {
+      "input": "53172642313121",
+      "length": 9,
+      "candidate_visits": 705,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 118,
+      "backtracks": 110,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "53462713333313",
+      "length": 8,
+      "candidate_visits": 137,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 23,
+      "backtracks": 16,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8
+      ]
+    },
+    {
+      "input": "54721631111111",
+      "length": 11,
+      "candidate_visits": 54702,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 9114,
+      "backtracks": 9104,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "input": "56143722211211",
+      "length": 10,
+      "candidate_visits": 3468,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 575,
+      "backtracks": 566,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "input": "57362143223132",
+      "length": 10,
+      "candidate_visits": 2005,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 334,
+      "backtracks": 325,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "input": "61543273233122",
+      "length": 9,
+      "candidate_visits": 397,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 66,
+      "backtracks": 58,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "62345713133111",
+      "length": 8,
+      "candidate_visits": 43,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 9,
+      "backtracks": 2,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        8
+      ]
+    },
+    {
+      "input": "64721531323313",
+      "length": 9,
+      "candidate_visits": 237,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 41,
+      "backtracks": 33,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        8,
+        9
+      ]
+    },
+    {
+      "input": "65143721311232",
+      "length": 9,
+      "candidate_visits": 828,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 136,
+      "backtracks": 128,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "65214731331233",
+      "length": 9,
+      "candidate_visits": 1723,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 287,
+      "backtracks": 279,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "65273141121122",
+      "length": 9,
+      "candidate_visits": 503,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 86,
+      "backtracks": 78,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "67245312132311",
+      "length": 7,
+      "candidate_visits": 109,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 17,
+      "backtracks": 11,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7
+      ]
+    },
+    {
+      "input": "71423563221122",
+      "length": 8,
+      "candidate_visits": 385,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 64,
+      "backtracks": 57,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "input": "71643251211332",
+      "length": 9,
+      "candidate_visits": 908,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 151,
+      "backtracks": 143,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "71645231333321",
+      "length": 9,
+      "candidate_visits": 2160,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 358,
+      "backtracks": 350,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "input": "72164531121131",
+      "length": 9,
+      "candidate_visits": 1006,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 169,
+      "backtracks": 161,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        8,
+        9
+      ]
+    },
+    {
+      "input": "76132453131311",
+      "length": 8,
+      "candidate_visits": 1504,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 248,
+      "backtracks": 241,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "input": "76543211111111",
+      "length": 11,
+      "candidate_visits": 79053,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 13173,
+      "backtracks": 13163,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "input": "76543213333331",
+      "length": 10,
+      "candidate_visits": 2173,
+      "same_path_as_v1": true,
+      "same_path_and_candidate_count_as_v3": true,
+      "descents": 364,
+      "backtracks": 355,
+      "face_turns": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "descent_turns": [
+        1,
+        2,
+        3
+      ],
+      "bounds": [
+        8,
+        9,
+        10
+      ]
+    }
+  ]
+}
