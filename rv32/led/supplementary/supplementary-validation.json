@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "scope": "Supplementary Unicorn and independent 3-D geometry; not Ripes GUI",
+  "complete_program_cases": [
+    {
+      "case": "solved",
+      "input": "12345671111111",
+      "path": [],
+      "frames": 1,
+      "mmio_writes": 1163,
+      "stack_written_bytes": 48,
+      "frame_sha256": [
+        "d2d9b7421d17f82191cb4af3cb9390579e5038ff6296743bb06704b26560cbaa"
+      ]
+    },
+    {
+      "case": "short",
+      "input": "25314672313211",
+      "path": [
+        2
+      ],
+      "frames": 2,
+      "mmio_writes": 1451,
+      "stack_written_bytes": 80,
+      "frame_sha256": [
+        "70fe6172b49af0c8bca8c4b66482dac08f1ec582ab699a3fa2fe00cc5e1b69f2",
+        "d2d9b7421d17f82191cb4af3cb9390579e5038ff6296743bb06704b26560cbaa"
+      ]
+    },
+    {
+      "case": "distance11",
+      "input": "21345671111111",
+      "path": [
+        0,
+        5,
+        7,
+        2,
+        3,
+        2,
+        5,
+        0,
+        7,
+        0,
+        3
+      ],
+      "frames": 12,
+      "mmio_writes": 4331,
+      "stack_written_bytes": 80,
+      "frame_sha256": [
+        "c73315c88d4ddc428c0dabaec6226fb29183e64d98ee861971ffe708ee739030",
+        "03ff18cb22a37f932961e7a80fd9921e4f41aec19fee702e37a61109d9ba1553",
+        "18fcb16306f3ee2a3ad31d7ef7a541eb09329ef6f5cb3df21f3be9c564a9f4f6",
+        "03fc8247c34b3cea4b0b597ef582f553ef678e3dae89adced16dc4e5d3044ed6",
+        "5f510139c569f04369656e2871cc83640f9dd4ec73c5303e1488a08c89dad30a",
+        "672830fc2dab2022b58d12ea32a4c2016b4a3b3643de567b2d5f78ae38f170b2",
+        "12bd42aecb7e28293ace985c3f4d9ce0fe98c83bcc5ff0aa1cb5b84e9498214d",
+        "c39d03df3523a065ba55e13179e1f36d4f1f1a1c81343e53f1120ac9657211f8",
+        "027ee671e6e9c977625e24afbac7b0f603de13641a68344b83cd3adef798d2d9",
+        "841e8a6cd5cde24a1f68c35682924caf31cea895387fd0d38bde18a2234730ac",
+        "2691e10ba50b1af2978ed19eae18f55c4f809a5c09895804a962fe71f8966ad9",
+        "d2d9b7421d17f82191cb4af3cb9390579e5038ff6296743bb06704b26560cbaa"
+      ]
+    }
+  ],
+  "random_state_move_checks": 270,
+  "emitted_half_and_inverse_turns_are_one_frame": true,
+  "abi_checks": true,
+  "mmio_bounds": true,
+  "invalid_input_status": 1,
+  "length_failure_status": 4,
+  "required_local_checks": [
+    "Pinned Ripes GUI source assembly",
+    "LED GUI animation",
+    "CLI/GUI path comparison"
+  ]
+}

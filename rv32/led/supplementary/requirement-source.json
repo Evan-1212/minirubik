@@ -1,0 +1,6 @@
+{
+  "url": "https://hackmd.io/@sysprog/2026-arch-homework1/download",
+  "sha256": "b32f5cfcf97088b4efd6b8df9a3060b278c7c4915b88720877577cb6c5b0b00a",
+  "section": "Visualization on the LED Matrix",
+  "scope": "35x25 row-major; 4x3 pixel facelets; actual solution replay; assemble-time renderer switch"
+}

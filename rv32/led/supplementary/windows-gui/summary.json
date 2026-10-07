@@ -1,0 +1,42 @@
+{
+  "status": "PASS_FOR_OBSERVED_GUI_SCOPE",
+  "processor": "RV32_ISS",
+  "ISA": "RV32I",
+  "device": {
+    "instance": "LED Matrix 0",
+    "width": 35,
+    "height": 25,
+    "base": "0xf0000000"
+  },
+  "case_results": {
+    "solved": {
+      "status": 0,
+      "length": 0,
+      "solved_display": true
+    },
+    "short": {
+      "status": 0,
+      "length": 1,
+      "solved_display": true
+    },
+    "distance11": {
+      "status": 0,
+      "length": 11,
+      "solved_display": true,
+      "observed_frames": 12,
+      "frame_count_source": "user observation",
+      "sampled_reference_matches": {
+        "initial": 0,
+        "intermediate": 5
+      }
+    }
+  },
+  "evidence_limits": [
+    "End registers and final display for distance11 were captured in the earlier fast run; the slowed rerun supplied initial/intermediate screenshots and the 12-frame observation.",
+    "The screenshots sample two animation frames; they are not a captured record of all 12.",
+    "The exact changed LED_DELAY constant has not yet been provided.",
+    "Ripes executable version/hash was previously pinned in the project, but was not remeasured from these screenshots.",
+    "Windows CLI checks for the new LED-source tree remain pending."
+  ],
+  "unchanged": "Historical sources, formal measurement records, and the 2644-state distance-11 gate"
+}

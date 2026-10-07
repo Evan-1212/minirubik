@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "base_commit": "4b5ec97dc97170e85d20efdbce360a77caf872bb",
+  "cases": [
+    {
+      "case": "solved",
+      "instruction_bytes_equal": true,
+      "text_bytes": 1428,
+      "text_sha256": "2978036c76f6f71d192b37b8cbe07a74760618a5f82006a3144e11d0f19c5b8c",
+      "reference": "measurements/stage4-asm-v5/20261006T085548Z-RV32_ISS-051199/solved.disasm.txt"
+    },
+    {
+      "case": "short",
+      "instruction_bytes_equal": true,
+      "text_bytes": 1428,
+      "text_sha256": "2978036c76f6f71d192b37b8cbe07a74760618a5f82006a3144e11d0f19c5b8c",
+      "reference": "measurements/stage4-asm-v5/20261006T085548Z-RV32_ISS-051199/short.disasm.txt"
+    },
+    {
+      "case": "distance11",
+      "instruction_bytes_equal": true,
+      "text_bytes": 1428,
+      "text_sha256": "2978036c76f6f71d192b37b8cbe07a74760618a5f82006a3144e11d0f19c5b8c",
+      "reference": "measurements/stage4-asm-v5/20261006T085548Z-RV32_ISS-051199/distance11.disasm.txt"
+    }
+  ]
+}

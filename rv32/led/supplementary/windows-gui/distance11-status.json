@@ -1,0 +1,18 @@
+{
+  "case": "distance11",
+  "expected_input": "21345671111111",
+  "observed_registers": {
+    "x25": "0x0000600d",
+    "x26": "0x00000000",
+    "x27": "0x0000000b"
+  },
+  "completion_status": "PASS",
+  "solved_LED_frame_observed": true,
+  "user_observed_animation": true,
+  "user_could_count_11_moves": true,
+  "scope": "Windows Ripes GUI: user observed 12 frames; initial and step-5 facelet colors match existing independent-model frames; prior final solved display and success/length registers verified",
+  "user_observed_frame_count": 12,
+  "initial_frame_color_match": true,
+  "intermediate_frame_color_match_step": 5,
+  "end_state_evidence_run": "Earlier user run of the same case; slowed rerun supplied initial/intermediate screenshots and 12-frame observation"
+}

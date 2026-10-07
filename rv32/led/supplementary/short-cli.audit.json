@@ -1,0 +1,25 @@
+{
+  "elf": "short-cli.elf",
+  "isa": "RV32I",
+  "text_bytes": 1428,
+  "static_data_bytes": 126488,
+  "static_sections": [
+    {
+      "name": ".rodata",
+      "address": 5536,
+      "bytes": 122232,
+      "flags": 2
+    },
+    {
+      "name": ".bss",
+      "address": 127776,
+      "bytes": 4256,
+      "flags": 3
+    }
+  ],
+  "reserved_stack_bytes": 4096,
+  "static_limit_bytes": 131072,
+  "static_budget_pass": true,
+  "undefined_symbols": [],
+  "instruction_audit_pass": true
+}

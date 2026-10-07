@@ -1,0 +1,43 @@
+{
+    "# instructions retired": 7452,
+    "registers": {
+        "x0": 0,
+        "x1": 56,
+        "x10": 0,
+        "x11": 0,
+        "x12": 268558024,
+        "x13": 0,
+        "x14": 140,
+        "x15": 0,
+        "x16": 268435463,
+        "x17": 10,
+        "x18": 0,
+        "x19": 0,
+        "x2": 268562168,
+        "x20": 0,
+        "x21": 0,
+        "x22": 0,
+        "x23": 0,
+        "x24": 0,
+        "x25": 24589,
+        "x26": 0,
+        "x27": 0,
+        "x28": 0,
+        "x29": 729,
+        "x3": 268557876,
+        "x30": 268435463,
+        "x31": 0,
+        "x4": 0,
+        "x5": 268558020,
+        "x6": 0,
+        "x7": 268558024,
+        "x8": 0,
+        "x9": 0
+    },
+    "runinfo": {
+        "ISA extensions": [
+        ],
+        "processor": "RV32_ISS",
+        "source file": "/workspace/scratch/6266f42a824a/led-work/rv32/build/led/ripes-supplementary/solved-renderer-ram.s"
+    }
+}

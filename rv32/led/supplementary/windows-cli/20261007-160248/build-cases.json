@@ -1,0 +1,188 @@
+[
+  {
+    "case": "solved",
+    "input": "12345671111111",
+    "expected_length": 0,
+    "renderer": false,
+    "test_mmio_base": null,
+    "sha256": "f41b76e88d6100b0179ceb2fddda594f4a6b7fefa1362ba1b2cbb9432b8a412a",
+    "elf": "solved-cli.elf",
+    "isa": "RV32I",
+    "text_bytes": 1428,
+    "static_data_bytes": 126488,
+    "static_sections": [
+      {
+        "name": ".rodata",
+        "address": 5536,
+        "bytes": 122232,
+        "flags": 2
+      },
+      {
+        "name": ".bss",
+        "address": 127776,
+        "bytes": 4256,
+        "flags": 3
+      }
+    ],
+    "reserved_stack_bytes": 4096,
+    "static_limit_bytes": 131072,
+    "static_budget_pass": true,
+    "undefined_symbols": [],
+    "instruction_audit_pass": true
+  },
+  {
+    "case": "short",
+    "input": "25314672313211",
+    "expected_length": 1,
+    "renderer": false,
+    "test_mmio_base": null,
+    "sha256": "9bee12205d1076428381df55a55743abee9d98c98b27b6b9c4c7a22ce6ea0b53",
+    "elf": "short-cli.elf",
+    "isa": "RV32I",
+    "text_bytes": 1428,
+    "static_data_bytes": 126488,
+    "static_sections": [
+      {
+        "name": ".rodata",
+        "address": 5536,
+        "bytes": 122232,
+        "flags": 2
+      },
+      {
+        "name": ".bss",
+        "address": 127776,
+        "bytes": 4256,
+        "flags": 3
+      }
+    ],
+    "reserved_stack_bytes": 4096,
+    "static_limit_bytes": 131072,
+    "static_budget_pass": true,
+    "undefined_symbols": [],
+    "instruction_audit_pass": true
+  },
+  {
+    "case": "distance11",
+    "input": "21345671111111",
+    "expected_length": 11,
+    "renderer": false,
+    "test_mmio_base": null,
+    "sha256": "e0ee4b8736c1f5ca0d6bee7d5caefba2532461d1d9e5db307dd6ade186fe211f",
+    "elf": "distance11-cli.elf",
+    "isa": "RV32I",
+    "text_bytes": 1428,
+    "static_data_bytes": 126488,
+    "static_sections": [
+      {
+        "name": ".rodata",
+        "address": 5536,
+        "bytes": 122232,
+        "flags": 2
+      },
+      {
+        "name": ".bss",
+        "address": 127776,
+        "bytes": 4256,
+        "flags": 3
+      }
+    ],
+    "reserved_stack_bytes": 4096,
+    "static_limit_bytes": 131072,
+    "static_budget_pass": true,
+    "undefined_symbols": [],
+    "instruction_audit_pass": true
+  },
+  {
+    "case": "solved",
+    "input": "12345671111111",
+    "expected_length": 0,
+    "renderer": true,
+    "test_mmio_base": 2097152,
+    "sha256": "8e5970e6ccdee3db52d5ac3a26a9d2324d5eb58ba144fa7b72f52f2e9986e24d",
+    "elf": "solved-renderer-test.elf",
+    "isa": "RV32I",
+    "text_bytes": 2176,
+    "static_data_bytes": 126728,
+    "static_sections": [
+      {
+        "name": ".rodata",
+        "address": 6272,
+        "bytes": 122424,
+        "flags": 2
+      },
+      {
+        "name": ".bss",
+        "address": 128704,
+        "bytes": 4304,
+        "flags": 3
+      }
+    ],
+    "reserved_stack_bytes": 4096,
+    "static_limit_bytes": 131072,
+    "static_budget_pass": true,
+    "undefined_symbols": [],
+    "instruction_audit_pass": true
+  },
+  {
+    "case": "short",
+    "input": "25314672313211",
+    "expected_length": 1,
+    "renderer": true,
+    "test_mmio_base": 2097152,
+    "sha256": "b828c6198cce1ad9788262c772a866e94ed6ddf89cebaafd1201aca78033aa91",
+    "elf": "short-renderer-test.elf",
+    "isa": "RV32I",
+    "text_bytes": 2176,
+    "static_data_bytes": 126728,
+    "static_sections": [
+      {
+        "name": ".rodata",
+        "address": 6272,
+        "bytes": 122424,
+        "flags": 2
+      },
+      {
+        "name": ".bss",
+        "address": 128704,
+        "bytes": 4304,
+        "flags": 3
+      }
+    ],
+    "reserved_stack_bytes": 4096,
+    "static_limit_bytes": 131072,
+    "static_budget_pass": true,
+    "undefined_symbols": [],
+    "instruction_audit_pass": true
+  },
+  {
+    "case": "distance11",
+    "input": "21345671111111",
+    "expected_length": 11,
+    "renderer": true,
+    "test_mmio_base": 2097152,
+    "sha256": "187eeefd9d11dc316efb428aa1a24f4f78c60aa64a855778f23775e9560bf4d5",
+    "elf": "distance11-renderer-test.elf",
+    "isa": "RV32I",
+    "text_bytes": 2176,
+    "static_data_bytes": 126728,
+    "static_sections": [
+      {
+        "name": ".rodata",
+        "address": 6272,
+        "bytes": 122424,
+        "flags": 2
+      },
+      {
+        "name": ".bss",
+        "address": 128704,
+        "bytes": 4304,
+        "flags": 3
+      }
+    ],
+    "reserved_stack_bytes": 4096,
+    "static_limit_bytes": 131072,
+    "static_budget_pass": true,
+    "undefined_symbols": [],
+    "instruction_audit_pass": true
+  }
+]
