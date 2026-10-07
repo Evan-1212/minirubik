@@ -1,11 +1,14 @@
 # LED Matrix renderer for asm-v5
 
+[Repository home](../../README.md) · [RV32I guide](../README.md)
+· [Measurement index](../../measurements/README.md)
+
 This source tree adds an unfolded-net renderer to the validated asm-v5 solver
 at commit `4b5ec97dc97170e85d20efdbce360a77caf872bb`. It does not change any
 historical source or measurements. Windows Ripes GUI end-state checks now pass
 for the three cases. The user also observed all 12 frames of the distance-11
 animation; its initial and sampled intermediate facelet colors match the
-independent geometrical model. See supplementary/windows-gui/WINDOWS_GUI.md
+independent geometrical model. See [Windows GUI evidence](supplementary/windows-gui/WINDOWS_GUI.md)
 for the exact evidence scope. Supplementary Linux/Unicorn results remain separate.
 
 ## Build and open
@@ -180,16 +183,22 @@ ELF numbers. Renderer-source RAM test counts, with delay disabled, are
 7,452 / 11,355 / 1,513,772. Linux binary/platform checks do not establish the
 Windows binary's actual LED peripheral display.
 
-Evidence: `supplementary/` contains the build audits, independent frame hashes,
+Evidence: [supplementary/](supplementary/) contains the build audits, independent frame hashes,
 Ripes reports/logs, command provenance, and unchanged-core comparison.
-Windows GUI evidence: supplementary/windows-gui/ records the three final
+Windows GUI evidence: [windows-gui/](supplementary/windows-gui/) records the three final
 LED displays/register results, the distance-11 initial and step-5 screenshots,
 and the user-observed 12-frame sequence.
+
+The archived `solved-led.png` and `distance11-led-final.png` are byte-identical
+copies of one image. They are retained under their historical names, but must
+not be counted as two independent screen captures. Case-specific register
+captures and status records are listed in the GUI evidence guide. The initial
+and move-5 distance-11 images provide separate sampled animation evidence.
 
 The LED sources were integrated into the user WSL repository. Newly built CLI
 ELFs passed Windows RV32_ISS checks for solved, short, and distance11, with
 retired instruction counts of 557, 753, and 1,468,209. Reports and build
-provenance are archived in supplementary/windows-cli/20261007-160248/.
+provenance are archived in [windows-cli/20261007-160248/](supplementary/windows-cli/20261007-160248/).
 
 The same three CLI ELF cases also completed in Windows RV32_5S with forwarding
 and hazard detection, using RV32I only. Each returned x25=0x600d and x26=0;
@@ -201,8 +210,11 @@ in [windows-pipeline/20261007/WALKTHROUGH.md](supplementary/windows-pipeline/202
 They cover IF/ID/EX/MEM/WB, store signals and memory contents, jump flushing,
 register write enable, destination/data, and the selected WB multiplexer path.
 The walkthrough distinguishes observed values from uncaptured transitions.
-No historical distance-11 gate was rerun. Integration into the formal HackMD
-report remains pending.
+No historical distance-11 gate was rerun for this integration. The
+[HackMD report](https://hackmd.io/TMhkNvaMTGOpdAZwlM0ZgA) now includes the LED
+mapping, Windows observations, instruction walkthrough and results discussion.
+Earlier pending-integration statements in the archived GUI guide describe
+the state when those captures were packaged; the current status is recorded here.
 
 Requirement source: [Homework 1](https://hackmd.io/@sysprog/2026-arch-homework1),
 Visualization on the LED Matrix. Tool compatibility source:

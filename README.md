@@ -1,5 +1,92 @@
 # minirubik
 
+This fork develops the original C solver into a memory-bounded IDA* solver,
+hand-written RV32I assembly, and a Ripes LED Matrix demonstration for
+Computer Architecture Homework 1. Solutions remain shortest under the
+half-turn metric (HTM).
+
+## Start here
+
+| Goal | Entry point |
+| --- | --- |
+| Read the design, measurements and discussion | [HackMD report](https://hackmd.io/TMhkNvaMTGOpdAZwlM0ZgA) |
+| Build the selected native C solver | [C Version 2](optimized_v2/README.md) |
+| Find the final RV32I implementation and its earlier checkpoints | [RV32I guide](rv32/README.md) |
+| Run the LED demo or build renderer-free CLI ELF files | [LED / CLI integration](rv32/led/README.md) |
+| Inspect measured results and original evidence | [Measurement index](measurements/README.md) |
+| Follow the store, jump flush and register-write walkthrough | [Windows pipeline walkthrough](rv32/led/supplementary/windows-pipeline/20261007/WALKTHROUGH.md) |
+| Inspect the incremental report history | [Historical HackMD revisions](docs/history/README.md) |
+
+## Quick start
+
+Run these commands from the repository root in Ubuntu/WSL. Native builds
+require a C compiler, Make and Python 3:
+
+```sh
+make -C optimized_v2
+./optimized_v2/build/solver-v2 21345671111111
+make -C optimized_v2 check
+```
+
+For the final RV32I CLI and LED artifacts, put the GNU
+`riscv64-unknown-elf-` tools on PATH, then run:
+
+```sh
+python3 rv32/led/build.py --delay 3000000
+```
+
+Outputs are generated under `rv32/build/led/`. In the pinned Windows Ripes
+`v2.2.6-106-g5b8a616`, instantiate **LED Matrix 0**, Width **35**, Height **25**,
+then load `short-gui.s` as Assembly and run on `RV32_ISS` with RV32I only.
+The [LED guide](rv32/led/README.md) covers all three cases, custom inputs,
+completion registers and the renderer switch. Use `*-cli.elf` for formal
+renderer-free measurements; `*-renderer-test.elf` is a supplementary RAM test.
+
+Running `make` at the repository root builds the original BFS programs,
+`solver` and `mini`. It does not build the optimized C or RV32I versions.
+
+## Recorded results
+
+The implementation and evidence checkpoint is
+[`8ba9a98`](https://github.com/Evan-1212/minirubik/tree/8ba9a98f218932d003bbebffd717efd433d4e196).
+The renderer-free assembly v5 has **1,428 bytes of linked `.text`** and
+**126,488 bytes of static data**, including its reserved 4,096-byte stack.
+On the pinned Windows `RV32_ISS`, all **2,644 distance-11 states** passed
+replay, optimal-length and instruction-budget checks. The measured maximum
+was **4,391,914 retired instructions**; the required input `21345671111111`
+took **1,468,209**. See the [measurement index](measurements/README.md) for
+the raw records and measurement boundaries.
+
+The LED integration retains the renderer-free instruction stream and animates
+the computed solution. Windows GUI observations and three-case `RV32_5S`
+checks are documented separately from the complete distance-11 `RV32_ISS`
+test. This is not exhaustive assembly testing over all 3,674,160 states.
+
+## Repository layout and history
+
+| Location | Role |
+| --- | --- |
+| `solver.c`, `mini.c`, `report.md`, `tests/` | Original BFS baseline, explanation and tests |
+| `optimized/` | C v1 and shared coordinate/transition-table code used by later versions |
+| `optimized_v2/` | Selected C v2 with the packed mixed pattern database |
+| `rv32/` | GCC reference, assembly refinements, complete target gate, LED integration |
+| `measurements/` | Host and Windows Ripes measurement archives |
+| `docs/history/` | Preserved earlier HackMD revisions |
+
+Earlier directories are also dependencies: the final assembly uses the v5
+parser, v4 search, v1 replay and shared C-generated tables. Some historical
+README files and build scripts are protected by source hashes. Their
+pending-work statements describe those checkpoints; the current status is
+summarized in the [RV32I guide](rv32/README.md). Preserve these directories and
+the original evidence when rebuilding. Generated executables normally go into
+ignored build directories; the archived distance-11 template ELF is retained
+as measurement evidence.
+
+## Original C99 BFS solver
+
+The sections below describe the upstream baseline. Its original design report
+is [`report.md`](report.md); the assignment's optimization report is linked above.
+
 An optimal C99 solver for the 2×2×2 Rubik’s Cube. It builds a breadth-first
 table for all 3,674,160 states and solves every valid position in at most 11
 half-turn-metric moves.
