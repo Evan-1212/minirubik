@@ -184,9 +184,25 @@ Evidence: `supplementary/` contains the build audits, independent frame hashes,
 Ripes reports/logs, command provenance, and unchanged-core comparison.
 Windows GUI evidence: supplementary/windows-gui/ records the three final
 LED displays/register results, the distance-11 initial and step-5 screenshots,
-and the user-observed 12-frame sequence. Still pending: installation in the
-user WSL repository and new-artifact Windows CLI confirmation, then visual
-pipeline T7 and the walkthrough. No historical distance-11 gate was rerun.
+and the user-observed 12-frame sequence.
+
+The LED sources were integrated into the user WSL repository. Newly built CLI
+ELFs passed Windows RV32_ISS checks for solved, short, and distance11, with
+retired instruction counts of 557, 753, and 1,468,209. Reports and build
+provenance are archived in supplementary/windows-cli/20261007-160248/.
+
+The same three CLI ELF cases also completed in Windows RV32_5S with forwarding
+and hazard detection, using RV32I only. Each returned x25=0x600d and x26=0;
+x27 was 0, 1, and 11 respectively. These are the three-case visual-pipeline
+checks for T7; they do not replace testing any additional grader-supplied state.
+
+The instruction-level walkthrough and ten original screenshots are archived
+in [windows-pipeline/20261007/WALKTHROUGH.md](supplementary/windows-pipeline/20261007/WALKTHROUGH.md).
+They cover IF/ID/EX/MEM/WB, store signals and memory contents, jump flushing,
+register write enable, destination/data, and the selected WB multiplexer path.
+The walkthrough distinguishes observed values from uncaptured transitions.
+No historical distance-11 gate was rerun. Integration into the formal HackMD
+report remains pending.
 
 Requirement source: [Homework 1](https://hackmd.io/@sysprog/2026-arch-homework1),
 Visualization on the LED Matrix. Tool compatibility source:
