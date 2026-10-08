@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "received_date": "2026-10-08 Asia/Taipei",
+  "scope": "Original user screenshots, all three corresponding filenames and completion registers visible; no new simulation by auditor",
+  "limitations": "Images do not independently encode binary hashes or executable version; these are tied to the existing package/provenance, not inferred from pixels.",
+  "cases": [
+    {
+      "case": "solved",
+      "image": "solved-RV32_5S-completion.png",
+      "sha256": "2e0b01d6f3aa5dbecb19f13fcd6021ab06bb3d31564227b8db3ba18a691d6c0c",
+      "observed_loaded_file": "C:/Tools/Ripes/LED-Matrix-Verified/build/solved-cli.elf",
+      "visible_processor": "5-stage processor",
+      "visible_ISA": "RV32I",
+      "x17": 10,
+      "x25": 24589,
+      "x26": 0,
+      "x27": 0,
+      "console": "Program exited with code: 0",
+      "review": "PASS"
+    },
+    {
+      "case": "short",
+      "image": "short-RV32_5S-completion.png",
+      "sha256": "a56bc6ae03c47128d8c8ea8169d46783e04268f7c3731c5de9900cb2aa5b5699",
+      "observed_loaded_file": "C:/Tools/Ripes/LED-Matrix-Verified/build/short-cli.elf",
+      "visible_processor": "5-stage processor",
+      "visible_ISA": "RV32I",
+      "x17": 10,
+      "x25": 24589,
+      "x26": 0,
+      "x27": 1,
+      "console": "Program exited with code: 0",
+      "review": "PASS"
+    },
+    {
+      "case": "distance11",
+      "image": "distance11-RV32_5S-completion.png",
+      "sha256": "4aa1801a075113e88f2ff8dac2a60b6a1b3580995c33838337fa15a27df90376",
+      "observed_loaded_file": "C:/Tools/Ripes/LED-Matrix-Verified/build/distance11-cli.elf",
+      "visible_processor": "5-stage processor",
+      "visible_ISA": "RV32I",
+      "x17": 10,
+      "x25": 24589,
+      "x26": 0,
+      "x27": 11,
+      "console": "Program exited with code: 0",
+      "review": "PASS"
+    }
+  ]
+}
