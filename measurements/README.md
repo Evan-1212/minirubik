@@ -64,6 +64,7 @@ the completed results. The test covers the entire distance-11 shell, not all
 | [New-artifact Windows CLI reports](../rv32/led/supplementary/windows-cli/20261007-160248/) | Renderer-free ELF counts: 557 / 753 / 1,468,209 for solved / short / required vector |
 | [Windows GUI observations](../rv32/led/supplementary/windows-gui/WINDOWS_GUI.md) | Actual 35×25 LED peripheral, completion registers and sampled animation captures |
 | [Integration guide](../rv32/led/README.md) | Shared renderer switch, memory audits, three-case RV32_5S results and evidence limitations |
+| [T7 pipeline completion](../rv32/led/supplementary/windows-pipeline-completion/20261008/README.md) | Original RV32_5S completion screenshots for solved / short / required distance-11, with checksums and observation records; not instruction-count measurements |
 | [Pipeline walkthrough](../rv32/led/supplementary/windows-pipeline/20261007/WALKTHROUGH.md) | Clock-stepped startup store, memory-write controls, jump flush and register writeback |
 | [Supplementary checks](../rv32/led/supplementary/) | Linux/Unicorn checks, geometric comparisons and build audits, distinct from Windows measurements |
 

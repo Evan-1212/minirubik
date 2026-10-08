@@ -205,6 +205,11 @@ and hazard detection, using RV32I only. Each returned x25=0x600d and x26=0;
 x27 was 0, 1, and 11 respectively. These are the three-case visual-pipeline
 checks for T7; they do not replace testing any additional grader-supplied state.
 
+The [T7 completion evidence](supplementary/windows-pipeline-completion/20261008/README.md)
+archives the three original RV32_5S completion screenshots, their checksums
+and observation records. These end-to-end captures are separate from the
+clock-stepped startup walkthrough below and from retired-instruction measurements.
+
 The instruction-level walkthrough and ten original screenshots are archived
 in [windows-pipeline/20261007/WALKTHROUGH.md](supplementary/windows-pipeline/20261007/WALKTHROUGH.md).
 They cover IF/ID/EX/MEM/WB, store signals and memory contents, jump flushing,

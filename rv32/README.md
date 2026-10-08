@@ -43,7 +43,8 @@ retired instructions. Newly built renderer-free LED-integration ELFs retain
 the solved/short/required-vector counts of 557 / 753 / 1,468,209.
 
 Windows LED GUI observations and the three-case `RV32_5S` reproduction checks
-are complete. The instruction walkthrough covers a startup store, jump flush
+are complete. The [T7 completion archive](led/supplementary/windows-pipeline-completion/20261008/README.md)
+contains the original three-case pipeline screenshots, checksums and observation records. The instruction walkthrough covers a startup store, jump flush
 and register writeback. Their scope is separate from the full distance-11
 `RV32_ISS` test; additional supplied inputs still need their own target checks.
 
